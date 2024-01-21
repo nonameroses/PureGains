@@ -68,14 +68,14 @@ public class ApplicationDbContextInitialiser
         // Seed, if necessary
         if (!_context.Equipment.Any())
         {
-            _context.Equipment.Add(new Equipment { Id = 1, Name = "Kettlebell" });
-            _context.Equipment.Add(new Equipment { Id = 2, Name = "Dumbbell" });
-            _context.Equipment.Add(new Equipment { Id = 3, Name = "Barbell" });
-            _context.Equipment.Add(new Equipment { Id = 4, Name = "Plate" });
-            _context.Equipment.Add(new Equipment { Id = 5, Name = "Pull-up Bar" });
-            _context.Equipment.Add(new Equipment { Id = 6, Name = "Bench" });
-            _context.Equipment.Add(new Equipment { Id = 7, Name = "Band" });
-            _context.Equipment.Add(new Equipment { Id = 8, Name = "Bodyweight" });
+            _context.Equipment.Add(new Equipment { Name = "Kettlebell" });
+            _context.Equipment.Add(new Equipment { Name = "Dumbbell" });
+            _context.Equipment.Add(new Equipment { Name = "Barbell" });
+            _context.Equipment.Add(new Equipment { Name = "Plate" });
+            _context.Equipment.Add(new Equipment { Name = "Pull-up Bar" });
+            _context.Equipment.Add(new Equipment { Name = "Bench" });
+            _context.Equipment.Add(new Equipment { Name = "Band" });
+            _context.Equipment.Add(new Equipment { Name = "Bodyweight" });
 
             // Default roles
             //var administratorRole = new IdentityRole(Roles.Administrator);

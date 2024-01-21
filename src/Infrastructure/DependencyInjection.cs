@@ -22,13 +22,25 @@ public static class DependencyInjection
         {
             options.AddInterceptors(sp.GetServices<ISaveChangesInterceptor>());
 
+#if (UseSQLite)
+            options.UseSqlite(connectionString);
+#else
             options.UseSqlServer(connectionString);
-
-            services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
-
-            services.AddScoped<ApplicationDbContextInitialiser>();
-
+#endif
         });
+
+        services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
+
+        services.AddScoped<ApplicationDbContextInitialiser>();
+
+
+
+        services.AddSingleton(TimeProvider.System);
+        //services.AddTransient<IIdentityService, IdentityService>();
+
+        //services.AddAuthorization(options =>
+        //    options.AddPolicy(Policies.CanPurge, policy => policy.RequireRole(Roles.Administrator)));
+
         return services;
     }
 }
