@@ -12,7 +12,10 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
     }
 
     public DbSet<Equipment> Equipment => Set<Equipment>();
-    //public DbSet<Muscle> Muscles => Set<Muscle>();
+    public DbSet<Muscle> Muscles => Set<Muscle>();
+    public DbSet<Exercise> Exercises => Set<Exercise>();
+    public DbSet<MuscleGroup> MuscleGroups => Set<MuscleGroup>();
+    public DbSet<WorkoutGroup> WorkoutGroups => Set<WorkoutGroup>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Entities;
-
-public class Equipment
+public class WorkoutGroup
 {
     public int Id { get; set; }
     [Required]
     public string? Name { get; set; }
     [Required]
-    public string? ImagePath { get; set; }
+    public MuscleGroup? MuscleGroup { get; set; }
+
+
 }
