@@ -7,7 +7,7 @@ public class WorkoutGroup
     [Required]
     public string? Name { get; set; }
     [Required]
-    public MuscleGroup? MuscleGroup { get; set; }
+    public ICollection<MuscleGroup?> MuscleGroup { get; set; } = new List<MuscleGroup?>();
 
 
 }

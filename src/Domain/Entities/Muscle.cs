@@ -10,6 +10,9 @@ public class Muscle
     public string? Description { get; set; }
     [Required]
     public MuscleGroup MuscleGroup { get; set; } = null!;
-    //[Required]
-    //public string? ImagePath { get; set; }
 }
+
+
+
+//[Required]
+//public string? ImagePath { get; set; }

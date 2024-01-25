@@ -101,8 +101,7 @@ public class ApplicationDbContextInitialiser
             await _context.SaveChangesAsync();
         }
 
-
-        if (_context.MuscleGroups.Any())
+        if (!_context.MuscleGroups.Any())
         {
             _context.MuscleGroups.Add(new MuscleGroup
             {
@@ -140,24 +139,140 @@ public class ApplicationDbContextInitialiser
 
         if (!_context.Muscles.Any())
         {
+
             _context.Muscles.Add(new Muscle
             {
                 Name = "Lats",
                 Description = "Latissimus dorsi - the broadest muscle of the back.",
-                MuscleGroup = new MuscleGroup { Id = 1 }
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
             });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Traps",
+                Description = "Trapezius - a large muscle extending over the back of the neck and shoulders.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+            });
+
             _context.Muscles.Add(new Muscle
             {
                 Name = "Rhomboids",
                 Description = "Rhomboid major and minor - muscles between the shoulder blades.",
-                MuscleGroup = new MuscleGroup { Id = 1 }
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Deltoids",
+                Description = "Shoulder muscles that contribute to shoulder movement.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 6)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Pectoralis Major",
+                Description = "Large chest muscle responsible for chest movement.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 2)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Pectoralis Minor",
+                Description = "Smaller chest muscle located beneath the pectoralis major.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 2)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Biceps Brachii",
+                Description = "Muscle in the upper arm responsible for elbow flexion.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 3)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Triceps Brachii",
+                Description = "Muscle in the back of the upper arm responsible for elbow extension.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 4)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Rectus Abdominis",
+                Description = "Abdominal muscles commonly known as the 'six-pack'.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 5)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Obliques",
+                Description = "Muscles on the sides of the abdominal area responsible for rotation.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 5)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Quadriceps",
+                Description = "Front thigh muscles responsible for knee extension.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Hamstrings",
+                Description = "Muscles at the back of the thigh responsible for knee flexion.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Gastrocnemius",
+                Description = "Calf muscle responsible for ankle movement.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Soleus",
+                Description = "Calf muscle beneath the gastrocnemius also involved in ankle movement.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Tibialis Anterior",
+                Description = "Muscle on the front of the lower leg responsible for dorsiflexion.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
             });
 
 
 
-
             await _context.SaveChangesAsync();
+
+
+
+
+            //var id = _context.MuscleGroups.Single(mg => mg.Id == 1);
+
+            //_//context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.MuscleGroups on");
+            // _context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.MuscleGroups Off");
+
+
+
+
+
+            //_context.Muscles.Add(new Muscle
+            //{
+            //    Name = "Rhomboids",
+            //    Description = "Rhomboid major and minor - muscles between the shoulder blades.",
+            //    MuscleGroup = new MuscleGroup { Id = 1 }
+            //});
+
         }
+
+
+        //    await _context.SaveChangesAsync();
+        //}
 
 
         //if (!_context.Exercises.Any())
@@ -197,85 +312,6 @@ public class ApplicationDbContextInitialiser
         //}
 
 
-        //_context.Muscles.Add(new Muscle
-        //{
-        //    Name = "Traps",
-        //    Description = "Trapezius - a large muscle extending over the back of the neck and shoulders.",
-        //    MuscleGroupId = 1
-        //});
-
-        //_context.Muscles.Add(new Muscle
-        //{
-        //    Name = "Deltoids",
-        //    Description = "Shoulder muscles that contribute to shoulder movement.",
-        //    MuscleGroupId = 6
-        //});
-        //_context.Muscles.Add(new Muscle
-        //{
-        //    Name = "Pectoralis Major",
-        //    Description = "Large chest muscle responsible for chest movement.",
-        //    MuscleGroupId = 2
-        //});
-        //_context.Muscles.Add(new Muscle
-        //{
-        //    Name = "Pectoralis Minor",
-        //    Description = "Smaller chest muscle located beneath the pectoralis major.",
-        //    MuscleGroupId = 2
-        //});
-        //_context.Muscles.Add(new Muscle
-        //{
-        //    Name = "Biceps Brachii",
-        //    Description = "Muscle in the upper arm responsible for elbow flexion.",
-        //    MuscleGroupId = 3
-        //});
-        //_context.Muscles.Add(new Muscle
-        //{
-        //    Name = "Triceps Brachii",
-        //    Description = "Muscle in the back of the upper arm responsible for elbow extension.",
-        //    MuscleGroupId = 4
-        //});
-        //_context.Muscles.Add(new Muscle
-        //{
-        //    Name = "Rectus Abdominis",
-        //    Description = "Abdominal muscles commonly known as the 'six-pack'.",
-        //    MuscleGroupId = 5
-        //});
-        //_context.Muscles.Add(new Muscle
-        //{
-        //    Name = "Obliques",
-        //    Description = "Muscles on the sides of the abdominal area responsible for rotation.",
-        //    MuscleGroupId = 5
-        //});
-        //_context.Muscles.Add(new Muscle
-        //{
-        //    Name = "Quadriceps",
-        //    Description = "Front thigh muscles responsible for knee extension.",
-        //    MuscleGroupId = 7
-        //});
-        //_context.Muscles.Add(new Muscle
-        //{
-        //    Name = "Hamstrings",
-        //    Description = "Muscles at the back of the thigh responsible for knee flexion.",
-        //    MuscleGroupId = 7
-        //});
-        //_context.Muscles.Add(new Muscle
-        //{
-        //    Name = "Gastrocnemius",
-        //    Description = "Calf muscle responsible for ankle movement.",
-        //    MuscleGroupId = 7
-        //});
-        //_context.Muscles.Add(new Muscle
-        //{
-        //    Name = "Soleus",
-        //    Description = "Calf muscle beneath the gastrocnemius also involved in ankle movement.",
-        //    MuscleGroupId = 7
-        //});
-        //_context.Muscles.Add(new Muscle
-        //{
-        //    Name = "Tibialis Anterior",
-        //    Description = "Muscle on the front of the lower leg responsible for dorsiflexion.",
-        //    MuscleGroupId = 7
-        //});
 
 
     }
