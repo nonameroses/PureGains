@@ -64,6 +64,26 @@ public class ApplicationDbContextInitialiser
 
     public async Task TrySeedAsync()
     {
+        // Default roles
+        //var administratorRole = new IdentityRole(Roles.Administrator);
+
+        //if (_roleManager.Roles.All(r => r.Name != administratorRole.Name))
+        //{
+        //    await _roleManager.CreateAsync(administratorRole);
+        //}
+
+        //// Default users
+        //var administrator = new ApplicationUser { UserName = "administrator@localhost", Email = "administrator@localhost" };
+
+        //if (_userManager.Users.All(u => u.UserName != administrator.UserName))
+        //{
+        //    await _userManager.CreateAsync(administrator, "Administrator1!");
+        //    if (!string.IsNullOrWhiteSpace(administratorRole.Name))
+        //    {
+        //        await _userManager.AddToRolesAsync(administrator, new[] { administratorRole.Name });
+        //    }
+        //}
+
         // Default data
         // Seed, if necessary
         if (!_context.Equipment.Any())
@@ -77,103 +97,88 @@ public class ApplicationDbContextInitialiser
             _context.Equipment.Add(new Equipment { Name = "Band", ImagePath = "../assets/equipment/resistance-band.png" });
             _context.Equipment.Add(new Equipment { Name = "Bodyweight", ImagePath = "../assets/equipment/bodyweight.png" });
 
-            // Default roles
-            //var administratorRole = new IdentityRole(Roles.Administrator);
-
-            //if (_roleManager.Roles.All(r => r.Name != administratorRole.Name))
-            //{
-            //    await _roleManager.CreateAsync(administratorRole);
-            //}
-
-            //// Default users
-            //var administrator = new ApplicationUser { UserName = "administrator@localhost", Email = "administrator@localhost" };
-
-            //if (_userManager.Users.All(u => u.UserName != administrator.UserName))
-            //{
-            //    await _userManager.CreateAsync(administrator, "Administrator1!");
-            //    if (!string.IsNullOrWhiteSpace(administratorRole.Name))
-            //    {
-            //        await _userManager.AddToRolesAsync(administrator, new[] { administratorRole.Name });
-            //    }
-            //}
-
-
             await _context.SaveChangesAsync();
         }
-
-        if (!_context.WorkoutGroups.Any())
-        {
-            _context.WorkoutGroups.Add(new WorkoutGroup
-            {
-                Name = "Pull",
-            });
-            _context.WorkoutGroups.Add(new WorkoutGroup
-            {
-                Name = "Push",
-            });
-            _context.WorkoutGroups.Add(new WorkoutGroup
-            {
-                Name = "Legs",
-            });
-            _context.WorkoutGroups.Add(new WorkoutGroup
-            {
-                Name = "Full-Body",
-            });
-            _context.WorkoutGroups.Add(new WorkoutGroup
-            {
-                Name = "Abs",
-            });
-            _context.WorkoutGroups.Add(new WorkoutGroup
-            {
-                Name = "Custom",
-            });
-
-            await _context.SaveChangesAsync();
-        }
-
-
         if (!_context.MuscleGroups.Any())
         {
             _context.MuscleGroups.Add(new MuscleGroup
             {
                 Name = "Back",
-                WorkoutGroups = _context.WorkoutGroups.Where(x => x.Id == 1).ToList()
             });
             _context.MuscleGroups.Add(new MuscleGroup
             {
                 Name = "Chest",
-                WorkoutGroups = _context.WorkoutGroups.Where(x => x.Id == 2).ToList()
+
             });
             _context.MuscleGroups.Add(new MuscleGroup
             {
                 Name = "Biceps",
-                WorkoutGroups = _context.WorkoutGroups.Where(x => x.Id == 1).ToList()
+
             });
             _context.MuscleGroups.Add(new MuscleGroup
             {
                 Name = "Triceps",
-                WorkoutGroups = _context.WorkoutGroups.Where(x => x.Id == 2).ToList()
+
             });
 
             _context.MuscleGroups.Add(new MuscleGroup
             {
                 Name = "Abs",
-                WorkoutGroups = _context.WorkoutGroups.Where(x => x.Id == 5).ToList()
+
             });
 
             _context.MuscleGroups.Add(new MuscleGroup
             {
                 Name = "Shoulders",
-                WorkoutGroups = _context.WorkoutGroups.Where(x => x.Id == 2).ToList()
+
             });
             _context.MuscleGroups.Add(new MuscleGroup
             {
                 Name = "Legs",
-                WorkoutGroups = _context.WorkoutGroups.Where(x => x.Id == 3).ToList()
+
             });
             await _context.SaveChangesAsync();
 
         }
+        if (!_context.WorkoutGroups.Any())
+        {
+            _context.WorkoutGroups.Add(new WorkoutGroup
+            {
+                Name = "Pull Workout",
+                MuscleGroups = _context.MuscleGroups.Where(x => x.Id == 1 || x.Id == 3).ToList()
+            });
+            _context.WorkoutGroups.Add(new WorkoutGroup
+            {
+                Name = "Push Workout",
+                MuscleGroups = _context.MuscleGroups.Where(x => x.Id == 2 || x.Id == 4 || x.Id == 6).ToList()
+            });
+            _context.WorkoutGroups.Add(new WorkoutGroup
+            {
+                Name = "Legs Workout",
+                MuscleGroups = _context.MuscleGroups.Where(x => x.Id == 7).ToList()
+            });
+            _context.WorkoutGroups.Add(new WorkoutGroup
+            {
+                Name = "Full-Body Workout",
+                MuscleGroups = _context.MuscleGroups.Where(x => x.Id == 1 || x.Id == 2 || x.Id == 3 ||
+                                                                x.Id == 4 || x.Id == 5 || x.Id == 6 || x.Id == 7).ToList()
+            });
+            _context.WorkoutGroups.Add(new WorkoutGroup
+            {
+                Name = "Abs Workout",
+                MuscleGroups = _context.MuscleGroups.Where(x => x.Id == 5).ToList()
+            });
+            //_context.WorkoutGroups.Add(new WorkoutGroup
+            //{
+            //    Name = "Custom",
+            //    MuscleGroups = _context.MuscleGroups.Where(x => x.Id == 1).ToList()
+            //});
+
+            await _context.SaveChangesAsync();
+        }
+
+
+
 
 
         if (!_context.Muscles.Any())

@@ -5,7 +5,7 @@
 namespace Infrastructure.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class PureGainsDbsssx : Migration
+    public partial class PureGainsDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -25,7 +25,7 @@ namespace Infrastructure.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "MuscleGroups",
+                name: "WorkoutGroups",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -34,7 +34,26 @@ namespace Infrastructure.Data.Migrations
                 },
                 constraints: table =>
                 {
+                    table.PrimaryKey("PK_WorkoutGroups", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MuscleGroups",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    WorkoutGroupId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
                     table.PrimaryKey("PK_MuscleGroups", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_MuscleGroups_WorkoutGroups_WorkoutGroupId",
+                        column: x => x.WorkoutGroupId,
+                        principalTable: "WorkoutGroups",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -58,33 +77,14 @@ namespace Infrastructure.Data.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "WorkoutGroups",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    MuscleGroupId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_WorkoutGroups", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_WorkoutGroups_MuscleGroups_MuscleGroupId",
-                        column: x => x.MuscleGroupId,
-                        principalTable: "MuscleGroups",
-                        principalColumn: "Id");
-                });
+            migrationBuilder.CreateIndex(
+                name: "IX_MuscleGroups_WorkoutGroupId",
+                table: "MuscleGroups",
+                column: "WorkoutGroupId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Muscles_MuscleGroupId",
                 table: "Muscles",
-                column: "MuscleGroupId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_WorkoutGroups_MuscleGroupId",
-                table: "WorkoutGroups",
                 column: "MuscleGroupId");
         }
 
@@ -98,10 +98,10 @@ namespace Infrastructure.Data.Migrations
                 name: "Muscles");
 
             migrationBuilder.DropTable(
-                name: "WorkoutGroups");
+                name: "MuscleGroups");
 
             migrationBuilder.DropTable(
-                name: "MuscleGroups");
+                name: "WorkoutGroups");
         }
     }
 }

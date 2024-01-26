@@ -80,7 +80,12 @@ namespace Infrastructure.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("WorkoutGroupId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("WorkoutGroupId");
 
                     b.ToTable("MuscleGroups");
                 });
@@ -93,16 +98,11 @@ namespace Infrastructure.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("MuscleGroupId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("MuscleGroupId");
 
                     b.ToTable("WorkoutGroups");
                 });
@@ -118,16 +118,16 @@ namespace Infrastructure.Data.Migrations
                     b.Navigation("MuscleGroup");
                 });
 
-            modelBuilder.Entity("Domain.Entities.WorkoutGroup", b =>
-                {
-                    b.HasOne("Domain.Entities.MuscleGroup", null)
-                        .WithMany("WorkoutGroups")
-                        .HasForeignKey("MuscleGroupId");
-                });
-
             modelBuilder.Entity("Domain.Entities.MuscleGroup", b =>
                 {
-                    b.Navigation("WorkoutGroups");
+                    b.HasOne("Domain.Entities.WorkoutGroup", null)
+                        .WithMany("MuscleGroups")
+                        .HasForeignKey("WorkoutGroupId");
+                });
+
+            modelBuilder.Entity("Domain.Entities.WorkoutGroup", b =>
+                {
+                    b.Navigation("MuscleGroups");
                 });
 #pragma warning restore 612, 618
         }
