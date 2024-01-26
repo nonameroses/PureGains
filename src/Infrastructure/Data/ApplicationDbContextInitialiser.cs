@@ -120,13 +120,11 @@ public class ApplicationDbContextInitialiser
                 Name = "Triceps",
 
             });
-
             _context.MuscleGroups.Add(new MuscleGroup
             {
                 Name = "Abs",
 
             });
-
             _context.MuscleGroups.Add(new MuscleGroup
             {
                 Name = "Shoulders",
@@ -137,6 +135,7 @@ public class ApplicationDbContextInitialiser
                 Name = "Legs",
 
             });
+
             await _context.SaveChangesAsync();
 
         }
@@ -145,40 +144,131 @@ public class ApplicationDbContextInitialiser
             _context.WorkoutGroups.Add(new WorkoutGroup
             {
                 Name = "Pull Workout",
-                MuscleGroups = _context.MuscleGroups.Where(x => x.Id == 1 || x.Id == 3).ToList()
             });
             _context.WorkoutGroups.Add(new WorkoutGroup
             {
                 Name = "Push Workout",
-                MuscleGroups = _context.MuscleGroups.Where(x => x.Id == 2 || x.Id == 4 || x.Id == 6).ToList()
             });
             _context.WorkoutGroups.Add(new WorkoutGroup
             {
                 Name = "Legs Workout",
-                MuscleGroups = _context.MuscleGroups.Where(x => x.Id == 7).ToList()
             });
             _context.WorkoutGroups.Add(new WorkoutGroup
             {
                 Name = "Full-Body Workout",
-                MuscleGroups = _context.MuscleGroups.Where(x => x.Id == 1 || x.Id == 2 || x.Id == 3 ||
-                                                                x.Id == 4 || x.Id == 5 || x.Id == 6 || x.Id == 7).ToList()
             });
             _context.WorkoutGroups.Add(new WorkoutGroup
             {
                 Name = "Abs Workout",
-                MuscleGroups = _context.MuscleGroups.Where(x => x.Id == 5).ToList()
             });
             //_context.WorkoutGroups.Add(new WorkoutGroup
             //{
-            //    Name = "Custom",
-            //    MuscleGroups = _context.MuscleGroups.Where(x => x.Id == 1).ToList()
+            //    Name = "Custom Workout",
+            //    // MuscleGroups = _context.MuscleGroups.Where(x => x.Id == 1).ToList()
             //});
 
             await _context.SaveChangesAsync();
         }
 
 
+        if (!_context.WorkoutGroupTargets.Any())
+        {
+            _context.WorkoutGroupTargets.Add(new WorkoutGroupTargets
+            {
+                // Pull Workout
+                WorkoutGroupId = 1,
+                // Back
+                MuscleGroupId = 1,
+            });
 
+            _context.WorkoutGroupTargets.Add(new WorkoutGroupTargets
+            {
+                // Pull Workout
+                WorkoutGroupId = 1,
+                // Bicep
+                MuscleGroupId = 3,
+            });
+
+            _context.WorkoutGroupTargets.Add(new WorkoutGroupTargets
+            {
+                // Push Workout
+                WorkoutGroupId = 2,
+                // Chest
+                MuscleGroupId = 2,
+            });
+            _context.WorkoutGroupTargets.Add(new WorkoutGroupTargets
+            {
+                // Push Workout
+                WorkoutGroupId = 2,
+                // Triceps
+                MuscleGroupId = 4,
+            });
+            _context.WorkoutGroupTargets.Add(new WorkoutGroupTargets
+            {
+                // Legs Workout
+                WorkoutGroupId = 3,
+                // Legs 
+                MuscleGroupId = 7,
+            });
+            _context.WorkoutGroupTargets.Add(new WorkoutGroupTargets
+            {
+                // Full-Body Workout
+                WorkoutGroupId = 4,
+                // Back
+                MuscleGroupId = 1,
+            });
+            _context.WorkoutGroupTargets.Add(new WorkoutGroupTargets
+            {
+                // Full-Body Workout
+                WorkoutGroupId = 4,
+                // Chest
+                MuscleGroupId = 2,
+            });
+            _context.WorkoutGroupTargets.Add(new WorkoutGroupTargets
+            {
+                // Full-Body Workout
+                WorkoutGroupId = 4,
+                // Biceps
+                MuscleGroupId = 3,
+            });
+            _context.WorkoutGroupTargets.Add(new WorkoutGroupTargets
+            {
+                // Full-Body Workout
+                WorkoutGroupId = 4,
+                // Triceps
+                MuscleGroupId = 4,
+            });
+            _context.WorkoutGroupTargets.Add(new WorkoutGroupTargets
+            {
+                // Full-Body Workout
+                WorkoutGroupId = 4,
+                // Abs
+                MuscleGroupId = 5,
+            });
+            _context.WorkoutGroupTargets.Add(new WorkoutGroupTargets
+            {
+                // Full-Body Workout
+                WorkoutGroupId = 4,
+                // Shoulders
+                MuscleGroupId = 6,
+            });
+            _context.WorkoutGroupTargets.Add(new WorkoutGroupTargets
+            {
+                // Full-Body Workout
+                WorkoutGroupId = 4,
+                // Legs
+                MuscleGroupId = 7,
+            });
+            _context.WorkoutGroupTargets.Add(new WorkoutGroupTargets
+            {
+                // Abs Workout
+                WorkoutGroupId = 5,
+                // Abs
+                MuscleGroupId = 5,
+            });
+
+
+        }
 
 
         if (!_context.Muscles.Any())

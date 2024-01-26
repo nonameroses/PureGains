@@ -15,9 +15,9 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
     public DbSet<Muscle> Muscles => Set<Muscle>();
 
     public DbSet<MuscleGroup> MuscleGroups => Set<MuscleGroup>();
-
-
     public DbSet<WorkoutGroup> WorkoutGroups => Set<WorkoutGroup>();
+    public DbSet<WorkoutGroupTargets> WorkoutGroupTargets => Set<WorkoutGroupTargets>();
+
     //  public DbSet<Exercise> Exercises => Set<Exercise>();
     protected override void OnModelCreating(ModelBuilder builder)
     {
