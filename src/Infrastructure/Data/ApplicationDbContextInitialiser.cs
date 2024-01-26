@@ -101,37 +101,76 @@ public class ApplicationDbContextInitialiser
             await _context.SaveChangesAsync();
         }
 
+        if (!_context.WorkoutGroups.Any())
+        {
+            _context.WorkoutGroups.Add(new WorkoutGroup
+            {
+                Name = "Pull",
+            });
+            _context.WorkoutGroups.Add(new WorkoutGroup
+            {
+                Name = "Push",
+            });
+            _context.WorkoutGroups.Add(new WorkoutGroup
+            {
+                Name = "Legs",
+            });
+            _context.WorkoutGroups.Add(new WorkoutGroup
+            {
+                Name = "Full-Body",
+            });
+            _context.WorkoutGroups.Add(new WorkoutGroup
+            {
+                Name = "Abs",
+            });
+            _context.WorkoutGroups.Add(new WorkoutGroup
+            {
+                Name = "Custom",
+            });
+
+            await _context.SaveChangesAsync();
+        }
+
+
         if (!_context.MuscleGroups.Any())
         {
             _context.MuscleGroups.Add(new MuscleGroup
             {
-                Name = "Back"
+                Name = "Back",
+                WorkoutGroups = _context.WorkoutGroups.Where(x => x.Id == 1).ToList()
             });
             _context.MuscleGroups.Add(new MuscleGroup
             {
-                Name = "Chest"
+                Name = "Chest",
+                WorkoutGroups = _context.WorkoutGroups.Where(x => x.Id == 2).ToList()
             });
             _context.MuscleGroups.Add(new MuscleGroup
             {
-                Name = "Biceps"
+                Name = "Biceps",
+                WorkoutGroups = _context.WorkoutGroups.Where(x => x.Id == 1).ToList()
             });
             _context.MuscleGroups.Add(new MuscleGroup
             {
-                Name = "Triceps"
-            });
-            _context.MuscleGroups.Add(new MuscleGroup
-            {
-                Name = "Abs"
-            });
-            _context.MuscleGroups.Add(new MuscleGroup
-            {
-                Name = "Shoulders"
-            });
-            _context.MuscleGroups.Add(new MuscleGroup
-            {
-                Name = "Legs"
+                Name = "Triceps",
+                WorkoutGroups = _context.WorkoutGroups.Where(x => x.Id == 2).ToList()
             });
 
+            _context.MuscleGroups.Add(new MuscleGroup
+            {
+                Name = "Abs",
+                WorkoutGroups = _context.WorkoutGroups.Where(x => x.Id == 5).ToList()
+            });
+
+            _context.MuscleGroups.Add(new MuscleGroup
+            {
+                Name = "Shoulders",
+                WorkoutGroups = _context.WorkoutGroups.Where(x => x.Id == 2).ToList()
+            });
+            _context.MuscleGroups.Add(new MuscleGroup
+            {
+                Name = "Legs",
+                WorkoutGroups = _context.WorkoutGroups.Where(x => x.Id == 3).ToList()
+            });
             await _context.SaveChangesAsync();
 
         }
@@ -249,30 +288,10 @@ public class ApplicationDbContextInitialiser
 
             await _context.SaveChangesAsync();
 
-
-
-
-            //var id = _context.MuscleGroups.Single(mg => mg.Id == 1);
-
-            //_//context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.MuscleGroups on");
-            // _context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.MuscleGroups Off");
-
-
-
-
-
-            //_context.Muscles.Add(new Muscle
-            //{
-            //    Name = "Rhomboids",
-            //    Description = "Rhomboid major and minor - muscles between the shoulder blades.",
-            //    MuscleGroup = new MuscleGroup { Id = 1 }
-            //});
-
         }
 
 
-        //    await _context.SaveChangesAsync();
-        //}
+
 
 
         //if (!_context.Exercises.Any())
@@ -286,26 +305,6 @@ public class ApplicationDbContextInitialiser
         //        SecondaryMuscle = new Muscle { Id = 2 },
         //        Priority = 1,
         //        Description = "",
-        //    });
-
-        //    await _context.SaveChangesAsync();
-        //}
-
-
-
-
-
-
-        //if (!_context.WorkoutGroups.Any())
-        //{
-        //    _context.WorkoutGroups.Add(new WorkoutGroup
-        //    {
-        //        Id = 1,
-        //        Name = "Pull",
-        //        MuscleGroup = new MuscleGroup
-        //        {
-        //            Id = 1
-        //        }
         //    });
 
         //    await _context.SaveChangesAsync();
