@@ -13,7 +13,7 @@ public class Exercise
     public Equipment Equipment { get; set; } = null!;
     [Required]
     public Muscle PrimaryMuscle { get; set; } = null!;
-    //public Muscle SecondaryMuscle { get; set; } = null!;
+    public Muscle SecondaryMuscle { get; set; } = null!;
     //[Required]
     //public string? ImagePath { get; set; }
 }
