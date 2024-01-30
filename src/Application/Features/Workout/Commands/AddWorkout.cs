@@ -9,6 +9,7 @@ public static class AddWorkout
     {
         public int UserId;
         public DateTime CreatedAt;
+        public List<WorkoutExercises> WorkoutExercises;
 
         public Command(int userId, DateTime createdAt)
         {
@@ -32,6 +33,7 @@ public static class AddWorkout
             {
                 UserId = request.UserId,
                 Date = request.CreatedAt
+
             };
 
             _context.Workouts.Add(workout);
