@@ -1,12 +1,11 @@
 ﻿using Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
-
 #if (UseApiOnly)
 using NSwag;
 using NSwag.Generation.Processors.Security;
 #endif
 
-namespace Microsoft.Extensions.DependencyInjection;
+namespace Api;
 
 public static class DependencyInjection
 {

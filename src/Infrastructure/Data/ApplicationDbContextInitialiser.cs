@@ -104,36 +104,47 @@ public class ApplicationDbContextInitialiser
             _context.MuscleGroups.Add(new MuscleGroup
             {
                 Name = "Back",
-            });
-            _context.MuscleGroups.Add(new MuscleGroup
-            {
-                Name = "Chest",
-
+                ImagePath = "../assets/muscles/back.png"
             });
             _context.MuscleGroups.Add(new MuscleGroup
             {
                 Name = "Biceps",
+                ImagePath = "../assets/muscles/biceps.png"
+
+            });
+            _context.MuscleGroups.Add(new MuscleGroup
+            {
+                Name = "Chest",
+                ImagePath = "../assets/muscles/chest.png'"
 
             });
             _context.MuscleGroups.Add(new MuscleGroup
             {
                 Name = "Triceps",
-
-            });
-            _context.MuscleGroups.Add(new MuscleGroup
-            {
-                Name = "Abs",
+                ImagePath = "../assets/muscles/triceps.png"
 
             });
             _context.MuscleGroups.Add(new MuscleGroup
             {
                 Name = "Shoulders",
+                ImagePath = "../assets/muscles/shoulder.png"
+
+            });
+            _context.MuscleGroups.Add(new MuscleGroup
+            {
+                Name = "Abs",
+                ImagePath = "../assets/muscles/abs.png"
 
             });
             _context.MuscleGroups.Add(new MuscleGroup
             {
                 Name = "Legs",
-
+                ImagePath = "../assets/muscles/legs.png"
+            });
+            _context.MuscleGroups.Add(new MuscleGroup
+            {
+                Name = "Full-Body",
+                ImagePath = "../assets/muscles/body-builder.png"
             });
 
             await _context.SaveChangesAsync();
@@ -299,28 +310,28 @@ public class ApplicationDbContextInitialiser
             {
                 Name = "Deltoids",
                 Description = "Shoulder muscles that contribute to shoulder movement.",
-                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 6)
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 5)
             });
 
             _context.Muscles.Add(new Muscle
             {
                 Name = "Pectoralis Major",
                 Description = "Large chest muscle responsible for chest movement.",
-                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 2)
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 3)
             });
 
             _context.Muscles.Add(new Muscle
             {
                 Name = "Pectoralis Minor",
                 Description = "Smaller chest muscle located beneath the pectoralis major.",
-                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 2)
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 3)
             });
 
             _context.Muscles.Add(new Muscle
             {
                 Name = "Biceps Brachii",
                 Description = "Muscle in the upper arm responsible for elbow flexion.",
-                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 3)
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 2)
             });
 
             _context.Muscles.Add(new Muscle
@@ -334,14 +345,14 @@ public class ApplicationDbContextInitialiser
             {
                 Name = "Rectus Abdominis",
                 Description = "Abdominal muscles commonly known as the 'six-pack'.",
-                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 5)
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 6)
             });
 
             _context.Muscles.Add(new Muscle
             {
                 Name = "Obliques",
                 Description = "Muscles on the sides of the abdominal area responsible for rotation.",
-                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 5)
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 6)
             });
 
             _context.Muscles.Add(new Muscle
@@ -378,6 +389,277 @@ public class ApplicationDbContextInitialiser
                 Description = "Muscle on the front of the lower leg responsible for dorsiflexion.",
                 MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
             });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Forearms",
+                Description = "Muscles of the forearm responsible for wrist and finger movements.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 2)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Glutes",
+                Description = "Muscles of the buttocks responsible for hip movement.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Calves",
+                Description = "Muscles of the lower leg responsible for ankle movement.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Latissimus Dorsi",
+                Description = "Large, flat muscles on the back responsible for shoulder and arm movement.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Teres Major",
+                Description = "Muscle of the upper back involved in shoulder movement.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Teres Minor",
+                Description = "Muscle of the upper back involved in shoulder movement.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Infraspinatus",
+                Description = "Muscle of the upper back involved in shoulder movement.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Supraspinatus",
+                Description = "Muscle of the upper back involved in shoulder movement.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Subscapularis",
+                Description = "Muscle of the upper back involved in shoulder movement.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Serratus Anterior",
+                Description = "Muscle on the side of the chest involved in shoulder movement.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Erector Spinae",
+                Description = "Group of muscles that straighten and rotate the back.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "External Obliques",
+                Description = "Muscles on the sides of the abdominal area responsible for rotation.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Internal Obliques",
+                Description = "Muscles on the sides of the abdominal area responsible for rotation.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Transverse Abdominis",
+                Description = "Muscle that wraps around the abdomen, providing stability.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Serratus Posterior",
+                Description = "Muscles of the upper back and neck involved in breathing.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Levator Scapulae",
+                Description = "Muscle that elevates the scapula.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Scalenes",
+                Description = "Muscles of the neck involved in breathing and neck movement.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 5)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Rotator Cuff",
+                Description = "Group of muscles that stabilize the shoulder joint.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 5)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Anterior Deltoid",
+                Description = "Front part of the shoulder muscle responsible for arm flexion.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 5)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Medial Deltoid",
+                Description = "Middle part of the shoulder muscle responsible for arm abduction.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 5)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Posterior Deltoid",
+                Description = "Rear part of the shoulder muscle responsible for arm extension.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 5)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Sternocleidomastoid",
+                Description = "Muscle of the neck responsible for head rotation and flexion.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 5)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Subclavius",
+                Description = "Muscle beneath the clavicle responsible for shoulder stabilization.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 3)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Intercostals",
+                Description = "Muscles between the ribs involved in breathing.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 3)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Brachialis",
+                Description = "Muscle in the upper arm that flexes the elbow.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 2)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Brachioradialis",
+                Description = "Muscle in the forearm that flexes the elbow.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 2)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Anconeus",
+                Description = "Small muscle in the back of the arm that assists in elbow extension.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 4)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Pronator Teres",
+                Description = "Muscle in the forearm that pronates the hand and forearm.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 2)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Supinator",
+                Description = "Muscle in the forearm that supinates the hand and forearm.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 2)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Quadratus Lumborum",
+                Description = "Muscle of the lower back involved in spinal movement and stability.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Iliopsoas",
+                Description = "Group of muscles that flex the hip joint.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Tensor Fasciae Latae",
+                Description = "Muscle of the hip responsible for hip flexion and abduction.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Adductors",
+                Description = "Muscles of the inner thigh responsible for hip adduction.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Gracilis",
+                Description = "Muscle of the inner thigh involved in hip adduction and knee flexion.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Pectineus",
+                Description = "Muscle of the inner thigh responsible for hip flexion and adduction.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Peroneus Longus",
+                Description = "Muscle of the lower leg responsible for ankle eversion and plantarflexion.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Peroneus Brevis",
+                Description = "Muscle of the lower leg responsible for ankle eversion and plantarflexion.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Anterior Tibialis",
+                Description = "Muscle on the front of the lower leg responsible for dorsiflexion.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
+            });
+
+
+
+
+
 
 
 

@@ -1,3 +1,6 @@
+using Api;
+using Application;
+using Infrastructure;
 using Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);

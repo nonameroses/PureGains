@@ -6,6 +6,8 @@ public class MuscleGroup
     public int Id { get; set; }
     [Required]
     public string? Name { get; set; }
+    [Required]
+    public string? ImagePath { get; set; }
     // Navigation property
     public ICollection<WorkoutGroupTargets> WorkoutGroupTargets { get; set; } = new List<WorkoutGroupTargets>();
 }
