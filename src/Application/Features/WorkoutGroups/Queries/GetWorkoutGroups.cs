@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Application.Features.WorkoutGroups.Queries;
 
-//Query to get all the Equipment 
 public class GetWorkoutGroups
 {
     public sealed class Query : IRequest<IEnumerable<Domain.Entities.WorkoutGroup>>
