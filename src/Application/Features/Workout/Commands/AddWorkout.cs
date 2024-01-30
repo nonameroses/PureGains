@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Application.Common.Interfaces;
+using MediatR;
 
 namespace Application.Features.Workout.Commands;
 
@@ -6,44 +7,39 @@ public static class AddWorkout
 {
     public sealed record Command : IRequest<Domain.Entities.Workout>
     {
-        public readonly Domain.Entities.Workout Workout;
-        public Command(Domain.Entities.Workout workout)
+        public int UserId;
+        public DateTime CreatedAt;
+
+        public Command(int userId, DateTime createdAt)
         {
-            Workout = workout;
+            UserId = userId;
+            CreatedAt = createdAt;
         }
     }
 
-    public sealed class Handler : IRequestHandler<Command, ProductDto>
+    public sealed class Handler : IRequestHandler<Command, Domain.Entities.Workout>
     {
-        private readonly IProductRepository _repository;
-        private readonly IMapper _mapper;
-        private readonly IEventPublisher _eventBus;
+        private readonly IApplicationDbContext _context;
 
-        public Handler(IProductRepository repository, IMapper mapper, IEventPublisher eventBus)
+        public Handler(IApplicationDbContext context)
         {
-            _repository = repository;
-            _mapper = mapper;
-            _eventBus = eventBus;
+            _context = context;
         }
 
-        public async Task<ProductDto> Handle(Command request, CancellationToken cancellationToken)
+        public async Task<Domain.Entities.Workout> Handle(Command request, CancellationToken cancellationToken)
         {
-            var productToAdd = Product.Create(
-                request.AddProductDto.Name,
-                request.AddProductDto.Details,
-                request.AddProductDto.Code,
-                request.AddProductDto.Cost,
-                request.AddProductDto.Price,
-                request.AddProductDto.AlertQuantity,
-                request.AddProductDto.TrackQuantity,
-                request.AddProductDto.Quantity);
-
-            await _repository.AddAsync(productToAdd, cancellationToken);
-            foreach (var @event in productToAdd.DomainEvents)
+            var workout = new Domain.Entities.Workout
             {
-                await _eventBus.PublishAsync(@event, token: cancellationToken);
-            }
-            return _mapper.Map<ProductDto>(productToAdd);
+                UserId = request.UserId,
+                Date = request.CreatedAt
+            };
+
+            _context.Workouts.Add(workout);
+
+            await _context.SaveChangesAsync(cancellationToken);
+
+            return workout;
+
         }
     }
 }
