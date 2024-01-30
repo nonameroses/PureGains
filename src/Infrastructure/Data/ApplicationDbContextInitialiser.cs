@@ -455,13 +455,6 @@ public class ApplicationDbContextInitialiser
 
             _context.Muscles.Add(new Muscle
             {
-                Name = "Serratus Anterior",
-                Description = "Muscle on the side of the chest involved in shoulder movement.",
-                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
-            });
-
-            _context.Muscles.Add(new Muscle
-            {
                 Name = "Erector Spinae",
                 Description = "Group of muscles that straighten and rotate the back.",
                 MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
@@ -469,23 +462,16 @@ public class ApplicationDbContextInitialiser
 
             _context.Muscles.Add(new Muscle
             {
-                Name = "External Obliques",
-                Description = "Muscles on the sides of the abdominal area responsible for rotation.",
-                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
-            });
-
-            _context.Muscles.Add(new Muscle
-            {
                 Name = "Internal Obliques",
                 Description = "Muscles on the sides of the abdominal area responsible for rotation.",
-                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 6)
             });
 
             _context.Muscles.Add(new Muscle
             {
                 Name = "Transverse Abdominis",
                 Description = "Muscle that wraps around the abdomen, providing stability.",
-                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 6)
             });
 
             _context.Muscles.Add(new Muscle
