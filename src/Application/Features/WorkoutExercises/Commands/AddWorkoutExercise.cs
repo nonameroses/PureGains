@@ -1,50 +1,50 @@
-﻿using Domain.Entities;
+﻿using Application.Common.Interfaces;
+using Domain.Entities;
 using MediatR;
 
 namespace Application.Features.WorkoutExercises.Commands;
 
-public static class CreateWorkoutExercise
+public static class AddWorkoutExercise
 {
-    public sealed record Command : IRequest<Workout>
+    public sealed record Command : IRequest<WorkoutExercise>
     {
-        public readonly AddProductDto AddProductDto;
-        public Command(AddProductDto addProductDto)
+        public int WorkoutId { get; set; } // Foreign Key to Workout
+        public int ExerciseId { get; set; } // Foreign Key to Exercise
+        //public int Sets { get; set; } = 4; // Default value
+        //public int Reps { get; set; } = 8; // Default value
+
+        public Command(int workoutId, int exerciseId)
         {
-            AddProductDto = addProductDto;
+            WorkoutId = workoutId;
+            ExerciseId = exerciseId;
+            //Sets = sets;
+            //Reps = reps;
         }
     }
 
-    public sealed class Handler : IRequestHandler<Command, ProductDto>
+    public sealed class Handler : IRequestHandler<Command, WorkoutExercise>
     {
-        private readonly IProductRepository _repository;
-        private readonly IMapper _mapper;
-        private readonly IEventPublisher _eventBus;
+        private readonly IApplicationDbContext _context;
 
-        public Handler(IProductRepository repository, IMapper mapper, IEventPublisher eventBus)
+        public Handler(IApplicationDbContext context)
         {
-            _repository = repository;
-            _mapper = mapper;
-            _eventBus = eventBus;
+            _context = context;
         }
 
-        public async Task<ProductDto> Handle(Command request, CancellationToken cancellationToken)
+        public async Task<WorkoutExercise> Handle(Command request, CancellationToken cancellationToken)
         {
-            var productToAdd = Product.Create(
-                request.AddProductDto.Name,
-                request.AddProductDto.Details,
-                request.AddProductDto.Code,
-                request.AddProductDto.Cost,
-                request.AddProductDto.Price,
-                request.AddProductDto.AlertQuantity,
-                request.AddProductDto.TrackQuantity,
-                request.AddProductDto.Quantity);
-
-            await _repository.AddAsync(productToAdd, cancellationToken);
-            foreach (var @event in productToAdd.DomainEvents)
+            var workoutExercise = new WorkoutExercise
             {
-                await _eventBus.PublishAsync(@event, token: cancellationToken);
-            }
-            return _mapper.Map<ProductDto>(productToAdd);
+                ExerciseId = request.ExerciseId,
+                WorkoutId = request.WorkoutId,
+            };
+
+            _context.WorkoutExercises.Add(workoutExercise);
+
+            await _context.SaveChangesAsync(cancellationToken);
+
+            return workoutExercise;
+
         }
     }
 }
