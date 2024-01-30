@@ -9,11 +9,11 @@ public class Exercise
     public string? Name { get; set; }
     public string? Description { get; set; }
     public int Priority { get; set; }
+    public string? YoutubeUrl { get; set; }
     [Required]
     public Equipment Equipment { get; set; } = null!;
-    [Required]
-    public Muscle PrimaryMuscle { get; set; } = null!;
-    public Muscle SecondaryMuscle { get; set; } = null!;
+    public Muscle? PrimaryMuscle { get; set; } = null!;
+    public Muscle? SecondaryMuscle { get; set; } = null!;
     //[Required]
     //public string? ImagePath { get; set; }
 }

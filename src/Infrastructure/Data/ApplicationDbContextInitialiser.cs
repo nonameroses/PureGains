@@ -312,7 +312,12 @@ public class ApplicationDbContextInitialiser
                 Description = "Shoulder muscles that contribute to shoulder movement.",
                 MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 5)
             });
-
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Serratus Anterior",
+                Description = "The main actions are protraction and upward rotation of the scapulothoracic joint. It's also a key scapular stabilizer, keeping the shoulder blades against the ribcage when at rest and during movement.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 3)
+            });
             _context.Muscles.Add(new Muscle
             {
                 Name = "Pectoralis Major",
@@ -329,14 +334,14 @@ public class ApplicationDbContextInitialiser
 
             _context.Muscles.Add(new Muscle
             {
-                Name = "Biceps Brachii",
+                Name = "Biceps",
                 Description = "Muscle in the upper arm responsible for elbow flexion.",
                 MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 2)
             });
 
             _context.Muscles.Add(new Muscle
             {
-                Name = "Triceps Brachii",
+                Name = "Triceps",
                 Description = "Muscle in the back of the upper arm responsible for elbow extension.",
                 MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 4)
             });
@@ -344,6 +349,13 @@ public class ApplicationDbContextInitialiser
             _context.Muscles.Add(new Muscle
             {
                 Name = "Rectus Abdominis",
+                Description = "Abdominal muscles commonly known as the 'six-pack'.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 6)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Lower Abs",
                 Description = "Abdominal muscles commonly known as the 'six-pack'.",
                 MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 6)
             });
@@ -508,7 +520,12 @@ public class ApplicationDbContextInitialiser
                 Description = "Front part of the shoulder muscle responsible for arm flexion.",
                 MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 5)
             });
-
+            _context.Muscles.Add(new Muscle
+            {
+                Name = "Rear Delts",
+                Description = "The rear delts help to stabilise the shoulders, and work alongside the muscles in your back to prevent your shoulders from hunching forward.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 5)
+            });
             _context.Muscles.Add(new Muscle
             {
                 Name = "Medial Deltoid",
@@ -590,7 +607,7 @@ public class ApplicationDbContextInitialiser
             {
                 Name = "Iliopsoas",
                 Description = "Group of muscles that flex the hip joint.",
-                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
             });
 
             _context.Muscles.Add(new Muscle
@@ -623,6 +640,13 @@ public class ApplicationDbContextInitialiser
 
             _context.Muscles.Add(new Muscle
             {
+                Name = "Hip Flexors",
+                Description = "The hip flexors are a group of muscles responsible for flexing the hip, or bringing the leg upward toward the body.",
+                MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
+            });
+
+            _context.Muscles.Add(new Muscle
+            {
                 Name = "Peroneus Longus",
                 Description = "Muscle of the lower leg responsible for ankle eversion and plantarflexion.",
                 MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
@@ -641,10 +665,461 @@ public class ApplicationDbContextInitialiser
                 Description = "Muscle on the front of the lower leg responsible for dorsiflexion.",
                 MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
             });
+            await _context.SaveChangesAsync();
+
+        }
+
+
+        if (!_context.Exercises.Any())
+        {
+            //Back Exercises
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Swings",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Erector Spinae"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                Description = "Swing the kettlebell between your legs and up to chest level",
+                YoutubeUrl = "https://www.youtube.com/watch?v=YSxHifyI6s8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Row",
+                Priority = 2,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Rhomboids"),
+                Description = "Bend forward and pull the kettlebell towards your waist",
+                YoutubeUrl = "https://www.youtube.com/watch?v=u4sG54-HKJw"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Deadlift",
+                Priority = 3,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Erector Spinae"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                Description = "Lift the kettlebell from the ground to a standing position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=-8JbTKR50rk"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Single-Arm Kettlebell Row",
+                Priority = 4,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Teres Major"),
+                Description = "Bend forward and pull the kettlebell with one arm",
+                YoutubeUrl = "https://www.youtube.com/watch?v=pYcpY20QaE8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell High Pull",
+                Priority = 5,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Traps"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Rhomboids"),
+                Description = "Pull the kettlebell up to your shoulder, leading with your elbow",
+                YoutubeUrl = "https://www.youtube.com/watch?v=0B5JwVgFLP4"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Row",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Rhomboids"),
+                Description = "Pull the dumbbell towards your hip while supporting yourself on a bench",
+                YoutubeUrl = "https://www.youtube.com/watch?v=pYcpY20QaE8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Deadlift",
+                Priority = 2,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Erector Spinae"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                Description = "Lift the dumbbells from the ground to a standing position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=ytGaGIn3SjE"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Pullover",
+                Priority = 3,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Serratus Posterior"),
+                Description = "Lie on a bench and extend a dumbbell over your chest, then lower it behind your head",
+                YoutubeUrl = "https://www.youtube.com/watch?v=0G2_XV7slIg"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Renegade Row",
+                Priority = 4,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Rhomboids"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                Description = "In a plank position, row a dumbbell with one hand, then alternate",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Zo61jP2O3Ug"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Shrug",
+                Priority = 5,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Traps"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Levator Scapulae"),
+                Description = "Lift your shoulders up towards your ears while holding dumbbells",
+                YoutubeUrl = "https://www.youtube.com/watch?v=cJRVVxmytaM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Row",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Rhomboids"),
+                Description = "Bend over and pull the barbell towards your waist",
+                YoutubeUrl = "https://www.youtube.com/watch?v=G8l_8chR5BE"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Deadlift",
+                Priority = 2,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Erector Spinae"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                Description = "Lift the barbell from the ground to a standing position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=3UwO0fKukRw"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Shrug",
+                Priority = 3,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Traps"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Levator Scapulae"),
+                Description = "Shrug your shoulders while holding a barbell",
+                YoutubeUrl = "https://www.youtube.com/watch?v=cJRVVxmytaM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "T-Bar Row",
+                Priority = 4,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Rhomboids"),
+                Description = "Row a T-bar loaded with weight, pulling towards your chest",
+                YoutubeUrl = "https://www.youtube.com/watch?v=j3Igk5nyZE4"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Good Morning",
+                Priority = 5,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Erector Spinae"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                Description = "Bend at your waist with a barbell on your back",
+                YoutubeUrl = "https://www.youtube.com/watch?v=PLHY2-nt-y4"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Row",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Rhomboids"),
+                Description = "Bend forward and pull the plate towards your waist",
+                YoutubeUrl = "https://www.youtube.com/watch?v=example-url"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Shrug",
+                Priority = 2,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Traps"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Levator Scapulae"),
+                Description = "Lift your shoulders up towards your ears while holding a plate",
+                YoutubeUrl = "https://www.youtube.com/watch?v=example-url"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bent Over Plate Row",
+                Priority = 3,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Rhomboids"),
+                Description = "Bend at the waist and row the plate towards your stomach",
+                YoutubeUrl = "https://www.youtube.com/watch?v=example-url"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Standing Plate Twist",
+                Priority = 4,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Erector Spinae"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Obliques"),
+                Description = "Hold the plate in front of you and twist your torso left and right",
+                YoutubeUrl = "https://www.youtube.com/watch?v=example-url"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Deadlift",
+                Priority = 5,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Erector Spinae"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                Description = "Lift the plate from the ground to a standing position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=example-url"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Wide Grip Pull-Up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Rhomboids"),
+                Description = "Pull yourself up with a wide grip",
+                YoutubeUrl = "https://www.youtube.com/watch?v=eGo4IYlbE5g"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Chin-Up",
+                Priority = 2,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Biceps"),
+                Description = "Pull yourself up with your palms facing you",
+                YoutubeUrl = "https://www.youtube.com/watch?v=brhRXlOhsAM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Neutral Grip Pull-Up",
+                Priority = 3,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Rhomboids"),
+                Description = "Pull yourself up with a neutral grip",
+                YoutubeUrl = "https://www.youtube.com/watch?v=sfTsgt-a63c"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Hanging Leg Raise",
+                Priority = 4,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Lower Abs"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Hip Flexors"),
+                Description = "Hang from the bar and raise your legs to 90 degrees",
+                YoutubeUrl = "https://www.youtube.com/watch?v=hdng3Nm1x_E"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Behind The Neck Pull-Up",
+                Priority = 5,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Teres Major"),
+                Description = "Pull yourself up so that the bar touches the back of your neck",
+                YoutubeUrl = "https://www.youtube.com/watch?v=A16zIcbR5sU"
+            });
 
 
 
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Pullover on Bench",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Serratus Anterior"),
+                Description = "Lie on a bench and extend a dumbbell over your chest, then lower it behind your head",
+                YoutubeUrl = "https://www.youtube.com/watch?v=0G2_XV7slIg"
+            });
 
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Row",
+                Priority = 2,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Rhomboids"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                Description = "Lay face down on a bench and row dumbbells towards your hips",
+                YoutubeUrl = "https://www.youtube.com/watch?v=kBWAon7ItDw"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Incline Dumbbell Row",
+                Priority = 3,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Rhomboids"),
+                Description = "Lay face down on an incline bench and row dumbbells",
+                YoutubeUrl = "https://www.youtube.com/watch?v=leQ4uoAxVLE"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Hyperextension",
+                Priority = 4,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Erector Spinae"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Glutes"),
+                Description = "Lay stomach down on a bench with your hips at the end, then raise and lower your upper body",
+                YoutubeUrl = "https://www.youtube.com/watch?v=qtjJUWCnDyE"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Seated Band Row",
+                Priority = 5,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Rhomboids"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                Description = "Sit on a bench with a band wrapped around your feet and row towards your waist",
+                YoutubeUrl = "https://www.youtube.com/watch?v=GZbfZ033f74"
+            });
+
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Pull Apart",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Rhomboids"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Rear Delts"),
+                Description = "Hold a band in front of you and pull it apart horizontally",
+                YoutubeUrl = "https://www.youtube.com/watch?v=JObYtU7Y7ag"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Banded Row",
+                Priority = 2,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Rhomboids"),
+                Description = "Anchor the band and pull it towards your waist",
+                YoutubeUrl = "https://www.youtube.com/watch?v=rloXYB8M3vU"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Banded Lat Pulldown",
+                Priority = 3,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Teres Major"),
+                Description = "Anchor the band overhead and pull down towards your chest",
+                YoutubeUrl = "https://www.youtube.com/watch?v=CAwf7n6Luuc"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Banded Deadlift",
+                Priority = 4,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Erector Spinae"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Glutes"),
+                Description = "Stand on the band and perform a deadlift motion",
+                YoutubeUrl = "https://www.youtube.com/watch?v=lFqAijL2rJ4"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Banded Good Morning",
+                Priority = 5,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Erector Spinae"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Hamstrings"),
+                Description = "Place the band over your neck and perform a good morning motion",
+                YoutubeUrl = "https://www.youtube.com/watch?v=O31MmhW72WE"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bodyweight Row",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Rhomboids"),
+                Description = "Find a low bar or rings, lie underneath it and pull yourself up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=dvkIaarnf0g"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Superman",
+                Priority = 2,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Erector Spinae"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Glutes"),
+                Description = "Lie on your stomach and lift your arms and legs off the ground",
+                YoutubeUrl = "https://www.youtube.com/watch?v=cc6UVRS7PW4"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Reverse Snow Angels",
+                Priority = 3,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Rhomboids"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Rear Delts"),
+                Description = "Lie on your stomach and move your arms from your hips to over your head",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2VmprBYtCug"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Inverted Row",
+                Priority = 4,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Lats"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Rhomboids"),
+                Description = "Find a bar at waist height, lie underneath it, and pull your chest towards the bar",
+                YoutubeUrl = "https://www.youtube.com/watch?v=dvkIaarnf0g"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Back Extension",
+                Priority = 5,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscle = _context.Muscles.Single(e => e.Name == "Erector Spinae"),
+                SecondaryMuscle = _context.Muscles.Single(e => e.Name == "Glutes"),
+                Description = "Lie face down on the ground and lift your upper body off the floor",
+                YoutubeUrl = "https://www.youtube.com/watch?v=ph3pddpKzzw"
+            });
 
 
 
