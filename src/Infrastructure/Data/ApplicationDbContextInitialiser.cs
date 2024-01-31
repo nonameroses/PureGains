@@ -1,5 +1,4 @@
 ﻿using Domain.Entities;
-using Domain.Entities.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -88,15 +87,15 @@ public class ApplicationDbContextInitialiser
         // Default data
         // Seed, if necessary
 
-        if (!_context.Users.Any())
-        {
-            _context.Users.Add(new User
-            {
-                Username = "test"
-            });
+        //if (!_context.Users.Any())
+        //{
+        //    _context.Users.Add(new User
+        //    {
+        //        Username = "test"
+        //    });
 
-            await _context.SaveChangesAsync();
-        }
+        //    await _context.SaveChangesAsync();
+        //}
 
         if (!_context.Equipment.Any())
         {
