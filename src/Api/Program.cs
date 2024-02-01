@@ -1,7 +1,6 @@
 using Api;
 using Application;
 using Application.Identity;
-using Domain.Entities.Identity;
 using Infrastructure;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -48,17 +47,17 @@ builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("read:admin-messages", policy =>
     {
-        policy.Requirements.Add(new HasScopeRequirement("read:admin-messages", domain));
+        policy.Requirements.Add(new RbacRequirement("read:admin-messages"));
     });
 });
 
 //builder.Services.AddAuthorization(options =>
-//{
+//{ 
 //    options.AddPolicy("read:messages", policy => policy.Requirements.Add(new
 //        HasScopeRequirement("read:messages", domain)));
 //    options.AddPolicy("read:admin-messages", policy => policy.Requirements.Add(new HasScopeRequirement("read:admin-messages", domain)));
 //});
-builder.Services.AddSingleton<IAuthorizationHandler, HasScopeHandler>();
+builder.Services.AddSingleton<IAuthorizationHandler, RbacHandler>();
 
 
 builder.Services.AddApplicationServices();
