@@ -7,20 +7,26 @@ public static class AddUser
 {
     public sealed record Command : IRequest<Domain.Entities.Identity.User>
     {
-        public string? Auth0UserId { get; set; }
-        public string? Email { get; set; }
-        public string? GivenName { get; set; }
-        public string? FamilyName { get; set; }
-        public string? Nickname { get; set; }
+        //public string? Auth0UserId { get; set; }
+        //public string? Email { get; set; }
+        //public string? GivenName { get; set; }
+        //public string? FamilyName { get; set; }
+        //public string? Nickname { get; set; }
 
-        public Command(string authId, string email, string givenName, string familyName, string nickName)
+        //public Command(string authId, string email, string givenName, string familyName, string nickName)
+        //{
+        //    Auth0UserId = authId;
+        //    Email = email;
+        //    GivenName = givenName;
+        //    FamilyName = familyName;
+        //    Nickname = nickName;
+
+        //}
+        public Domain.Entities.Identity.User User { get; set; }
+
+        public Command(Domain.Entities.Identity.User user)
         {
-            Auth0UserId = authId;
-            Email = email;
-            GivenName = givenName;
-            FamilyName = familyName;
-            Nickname = nickName;
-
+            User = user;
         }
     }
 
@@ -37,11 +43,11 @@ public static class AddUser
         {
             var user = new Domain.Entities.Identity.User
             {
-                Auth0UserId = request.Auth0UserId,
-                Email = request.Email,
-                GivenName = request.GivenName,
-                FamilyName = request.FamilyName,
-                Nickname = request.Nickname,
+                Auth0UserId = request.User.Auth0UserId,
+                Email = request.User.Email,
+                GivenName = request.User.GivenName,
+                FamilyName = request.User.FamilyName,
+                Nickname = request.User.Nickname,
                 CreatedAt = DateTime.Now
             };
 

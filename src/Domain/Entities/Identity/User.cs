@@ -9,5 +9,7 @@ public class User
     public string? FamilyName { get; set; }
     public string? Nickname { get; set; }
     public DateTime CreatedAt { get; set; }
+
+    public bool IsProfileCreated { get; set; } = false;
     //public DateTime UpdatedAt { get; set; }
 }
