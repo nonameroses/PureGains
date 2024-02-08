@@ -23,10 +23,10 @@ public class WorkoutController : Controller
 
         return workouts;
     }
-    [HttpPost("addWorkouts")]
-    public async Task<Workout> AddWorkotus(int userId, List<WorkoutExercise> workoutExercises)
+    [HttpPut("addWorkout")]
+    public async Task<Workout> AddWorkout(int id)
     {
-        var workouts = await _mediator.Send(new AddWorkout.Command(userId, workoutExercises));
+        var workouts = await _mediator.Send(new AddWorkout.Command(id));
 
         return workouts;
     }

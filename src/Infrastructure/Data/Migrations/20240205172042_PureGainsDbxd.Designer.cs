@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240205171838_PureGainsDbxd")]
+    [Migration("20240205172042_PureGainsDbxd")]
     partial class PureGainsDbxd
     {
         /// <inheritdoc />

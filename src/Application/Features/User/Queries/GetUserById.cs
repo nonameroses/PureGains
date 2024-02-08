@@ -1,5 +1,6 @@
 ﻿using Application.Common.Interfaces;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace Application.Features.User.Queries;
 
@@ -26,7 +27,7 @@ public class GetUserById
 
         public async Task<Domain.Entities.Identity.User> Handle(Query request, CancellationToken cancellationToken)
         {
-            var user = await _context.Users.FindAsync(request, cancellationToken);
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.Auth0UserId == request.Auth0UserId, cancellationToken);
             if (user != null)
             {
 

@@ -12,7 +12,7 @@ public class Exercise
     public string? YoutubeUrl { get; set; }
     public int EquipmentId { get; set; }
     public int PrimaryMuscleId { get; set; }
-    public int SecondaryMuscleId { get; set; }
+    public int? SecondaryMuscleId { get; set; }
     [Required]
     public Equipment Equipment { get; set; } = null!;
     public Muscle? PrimaryMuscle { get; set; } = null!;

@@ -1,5 +1,4 @@
 ﻿using Application.Common.Interfaces;
-using Domain.Entities;
 using MediatR;
 
 namespace Application.Features.Workout.Commands;
@@ -9,12 +8,12 @@ public static class AddWorkout
     public sealed record Command : IRequest<Domain.Entities.Workout>
     {
         public int UserId;
-        public List<WorkoutExercise> WorkoutExercises;
+        // public List<WorkoutExercise> WorkoutExercises;
 
-        public Command(int userId, List<WorkoutExercise> workoutExercises)
+        public Command(int userId)
         {
             UserId = userId;
-            WorkoutExercises = workoutExercises;
+            //  WorkoutExercises = workoutExercises;
         }
     }
 
@@ -33,7 +32,7 @@ public static class AddWorkout
             {
                 UserId = request.UserId,
                 Date = DateTime.Now,
-                WorkoutExercises = request.WorkoutExercises
+                //  WorkoutExercises = request.WorkoutExercises
 
             };
 

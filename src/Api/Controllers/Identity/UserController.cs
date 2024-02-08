@@ -2,7 +2,6 @@
 using Application.Features.User.Queries;
 using Domain.Entities.Identity;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers.Identity;
@@ -19,7 +18,7 @@ public class UserController : Controller
     }
 
     [HttpGet]
-    [Authorize]
+    //[Authorize]
     public Task<User> GetUserById(string id)
     {
         var user = _mediator.Send(new GetUserById.Query(id));
@@ -27,7 +26,8 @@ public class UserController : Controller
         return user;
     }
     [HttpPut]
-    [Authorize]
+    //[Authorize]
+
     public Task<User> CreateUser(User user)
     {
         var result = _mediator.Send(new AddUser.Command(user));
