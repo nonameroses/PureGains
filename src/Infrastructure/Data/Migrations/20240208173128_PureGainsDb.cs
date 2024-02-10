@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace Infrastructure.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class PureGainsDbxd : Migration
+    public partial class PureGainsDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -86,6 +87,42 @@ namespace Infrastructure.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Exercises",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Priority = table.Column<int>(type: "int", nullable: false),
+                    YoutubeUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    EquipmentId = table.Column<int>(type: "int", nullable: false),
+                    PrimaryMuscleGroupId = table.Column<int>(type: "int", nullable: false),
+                    SecondaryMuscleGroupId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Exercises", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Exercises_Equipment_EquipmentId",
+                        column: x => x.EquipmentId,
+                        principalTable: "Equipment",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Exercises_MuscleGroups_PrimaryMuscleGroupId",
+                        column: x => x.PrimaryMuscleGroupId,
+                        principalTable: "MuscleGroups",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Exercises_MuscleGroups_SecondaryMuscleGroupId",
+                        column: x => x.SecondaryMuscleGroupId,
+                        principalTable: "MuscleGroups",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Muscles",
                 columns: table => new
                 {
@@ -133,43 +170,6 @@ namespace Infrastructure.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Exercises",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Priority = table.Column<int>(type: "int", nullable: false),
-                    YoutubeUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    EquipmentId = table.Column<int>(type: "int", nullable: false),
-                    PrimaryMuscleId = table.Column<int>(type: "int", nullable: false),
-                    SecondaryMuscleId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Exercises", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Exercises_Equipment_EquipmentId",
-                        column: x => x.EquipmentId,
-                        principalTable: "Equipment",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Exercises_Muscles_PrimaryMuscleId",
-                        column: x => x.PrimaryMuscleId,
-                        principalTable: "Muscles",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Exercises_Muscles_SecondaryMuscleId",
-                        column: x => x.SecondaryMuscleId,
-                        principalTable: "Muscles",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "WorkoutExercises",
                 columns: table => new
                 {
@@ -204,14 +204,14 @@ namespace Infrastructure.Data.Migrations
                 column: "EquipmentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Exercises_PrimaryMuscleId",
+                name: "IX_Exercises_PrimaryMuscleGroupId",
                 table: "Exercises",
-                column: "PrimaryMuscleId");
+                column: "PrimaryMuscleGroupId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Exercises_SecondaryMuscleId",
+                name: "IX_Exercises_SecondaryMuscleGroupId",
                 table: "Exercises",
-                column: "SecondaryMuscleId");
+                column: "SecondaryMuscleGroupId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Muscles_MuscleGroupId",
@@ -243,6 +243,9 @@ namespace Infrastructure.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "Muscles");
+
+            migrationBuilder.DropTable(
                 name: "Users");
 
             migrationBuilder.DropTable(
@@ -262,9 +265,6 @@ namespace Infrastructure.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Equipment");
-
-            migrationBuilder.DropTable(
-                name: "Muscles");
 
             migrationBuilder.DropTable(
                 name: "MuscleGroups");

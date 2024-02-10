@@ -1,4 +1,5 @@
 ﻿using Application.Common.Interfaces;
+using Application.Features.Exercises.Dtos;
 using Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -10,11 +11,11 @@ public class GetExercises
 {
     public sealed class Query : IRequest<IEnumerable<Exercise>>
     {
-        public List<Exercise> Exercises { get; set; } = null!;
+        public ExerciseRequestDto Exercises { get; set; }
 
-        public Query()
+        public Query(ExerciseRequestDto exercises)
         {
-
+            Exercises = exercises;
         }
     }
 
@@ -29,7 +30,14 @@ public class GetExercises
 
         public async Task<IEnumerable<Exercise>> Handle(Query request, CancellationToken cancellationToken)
         {
-            var exercises = await _context.Exercises.ToListAsync(cancellationToken);
+            var exercises = await _context.Exercises.Where(e =>
+                    request.Exercises.EquipmentIds.Contains(e.EquipmentId) &&
+                    request.Exercises.MuscleGroupIds.Contains(e.PrimaryMuscleGroupId))
+                    .ToListAsync(cancellationToken);
+
+            //var exercises = await _context.Exercises.Where(e =>
+            //        e.EquipmentId == exercises.EquipmentId && e.PrimaryMuscleGroupId == exercises.MuscleGroupId)
+            //    .ToListAsync(cancellationToken);
 
             return exercises;
         }

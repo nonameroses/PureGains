@@ -61,13 +61,13 @@ namespace Infrastructure.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PrimaryMuscleId")
+                    b.Property<int>("PrimaryMuscleGroupId")
                         .HasColumnType("int");
 
                     b.Property<int>("Priority")
                         .HasColumnType("int");
 
-                    b.Property<int>("SecondaryMuscleId")
+                    b.Property<int?>("SecondaryMuscleGroupId")
                         .HasColumnType("int");
 
                     b.Property<string>("YoutubeUrl")
@@ -77,9 +77,9 @@ namespace Infrastructure.Data.Migrations
 
                     b.HasIndex("EquipmentId");
 
-                    b.HasIndex("PrimaryMuscleId");
+                    b.HasIndex("PrimaryMuscleGroupId");
 
-                    b.HasIndex("SecondaryMuscleId");
+                    b.HasIndex("SecondaryMuscleGroupId");
 
                     b.ToTable("Exercises");
                 });
@@ -266,23 +266,21 @@ namespace Infrastructure.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Entities.Muscle", "PrimaryMuscle")
+                    b.HasOne("Domain.Entities.MuscleGroup", "PrimaryMuscleGroup")
                         .WithMany()
-                        .HasForeignKey("PrimaryMuscleId")
+                        .HasForeignKey("PrimaryMuscleGroupId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Entities.Muscle", "SecondaryMuscle")
+                    b.HasOne("Domain.Entities.MuscleGroup", "SecondaryMuscleGroup")
                         .WithMany()
-                        .HasForeignKey("SecondaryMuscleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SecondaryMuscleGroupId");
 
                     b.Navigation("Equipment");
 
-                    b.Navigation("PrimaryMuscle");
+                    b.Navigation("PrimaryMuscleGroup");
 
-                    b.Navigation("SecondaryMuscle");
+                    b.Navigation("SecondaryMuscleGroup");
                 });
 
             modelBuilder.Entity("Domain.Entities.Muscle", b =>

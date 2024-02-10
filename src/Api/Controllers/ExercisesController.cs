@@ -1,4 +1,5 @@
-﻿using Application.Features.Exercises.Queries;
+﻿using Application.Features.Exercises.Dtos;
+using Application.Features.Exercises.Queries;
 using Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -15,10 +16,10 @@ public class ExercisesController : Controller
         _mediator = mediator;
     }
 
-    [HttpGet("getExercises")]
-    public async Task<IEnumerable<Exercise>> GetBooks()
+    [HttpPost("getExercisesForUser")]
+    public async Task<IEnumerable<Exercise>> GetExercisesForUser(ExerciseRequestDto request)
     {
-        var exercises = await _mediator.Send(new GetExercises.Query());
+        var exercises = await _mediator.Send(new GetExercises.Query(request));
 
         return exercises;
     }
