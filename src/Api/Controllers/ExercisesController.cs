@@ -13,14 +13,23 @@ public class ExercisesController : Controller
 
     public ExercisesController(IMediator mediator)
     {
-        _mediator = mediator;
+        _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
     }
 
-    [HttpPost("getExercisesForUser")]
-    public async Task<IEnumerable<Exercise>> GetExercisesForUser(ExerciseRequestDto request)
+    [HttpPost("getInitialExercisesForUser")]
+    public async Task<IEnumerable<Exercise>> GetInitialExercisesForUser(ExerciseRequestDto request)
     {
         var exercises = await _mediator.Send(new GetExercises.Query(request));
 
         return exercises;
     }
+
+    [HttpPost("getExercisesForUserWorkout")]
+    public async Task<IEnumerable<Exercise>> GetExercisesForUserWorkout(List<int> exerciseIds)
+    {
+        var exercises = await _mediator.Send(new GetExercisesForUserWorkout.Query(exerciseIds));
+
+        return exercises;
+    }
+
 }

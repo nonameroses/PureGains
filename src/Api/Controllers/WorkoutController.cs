@@ -13,13 +13,13 @@ public class WorkoutController : Controller
 
     public WorkoutController(IMediator mediator)
     {
-        _mediator = mediator;
+        _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator)); ;
     }
 
     [HttpGet("getWorkouts")]
-    public async Task<IEnumerable<Workout>> GetWorkouts()
+    public async Task<IEnumerable<Workout>> GetWorkouts(int userId)
     {
-        var workouts = await _mediator.Send(new GetWorkouts.Query());
+        var workouts = await _mediator.Send(new GetWorkoutsForUser.Query(userId));
 
         return workouts;
     }

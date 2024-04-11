@@ -4,15 +4,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Application.Features.Workout.Queries;
 
-public class GetWorkouts
+public class GetWorkoutsForUser
 {
     public sealed class Query : IRequest<IEnumerable<Domain.Entities.Workout>>
     {
-        public List<Domain.Entities.Workout> Workouts { get; set; } = null!;
+        public int UserId { get; set; }
 
-        public Query()
+        public Query(int userId)
         {
-
+            UserId = userId;
         }
     }
 
@@ -27,7 +27,7 @@ public class GetWorkouts
 
         public async Task<IEnumerable<Domain.Entities.Workout>> Handle(Query request, CancellationToken cancellationToken)
         {
-            var workouts = await _context.Workouts.ToListAsync(cancellationToken);
+            var workouts = await _context.Workouts.Where(w => w.UserId == request.UserId).ToListAsync(cancellationToken);
 
             return workouts;
         }

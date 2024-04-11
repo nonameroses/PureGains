@@ -13,7 +13,7 @@ public class WorkoutExercisesController : Controller
 
     public WorkoutExercisesController(IMediator mediator)
     {
-        _mediator = mediator;
+        _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator)); ;
     }
 
     [HttpGet("getWorkoutExercises")]
@@ -24,11 +24,11 @@ public class WorkoutExercisesController : Controller
         return workouts;
     }
 
-    [HttpPost("addWorkoutExercise")]
-    public async Task<WorkoutExercise> AddWorkoutExercise(int workoutId, int exerciseId)
+    [HttpPut("addWorkoutExercise")]
+    public async Task<IEnumerable<int>> AddWorkoutExercise(int workoutId, List<int> exerciseIds)
     {
-        var workouts = await _mediator.Send(new AddWorkoutExercise.Command(workoutId, exerciseId));
+        var exercises = await _mediator.Send(new AddWorkoutExercise.Command(workoutId, exerciseIds));
 
-        return workouts;
+        return exercises;
     }
 }

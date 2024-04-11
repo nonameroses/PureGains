@@ -1,21 +1,18 @@
 ﻿using Application.Common.Interfaces;
-using Application.Features.Exercises.Dtos;
 using Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace Application.Features.Exercises.Queries;
-
-//Query to get all the Equipment 
-public class GetExercises
+public class GetExercisesForUserWorkout
 {
     public sealed class Query : IRequest<IEnumerable<Exercise>>
     {
-        public ExerciseRequestDto Exercises { get; set; }
+        public List<int> ExerciseIds { get; set; }
 
-        public Query(ExerciseRequestDto exercises)
+        public Query(List<int> exerciseIds)
         {
-            Exercises = exercises;
+            ExerciseIds = exerciseIds;
         }
     }
 
@@ -30,10 +27,8 @@ public class GetExercises
 
         public async Task<IEnumerable<Exercise>> Handle(Query request, CancellationToken cancellationToken)
         {
-            var exercises = await _context.Exercises.Where(e =>
-                    request.Exercises.EquipmentIds.Contains(e.EquipmentId) &&
-                    request.Exercises.MuscleGroupIds.Contains(e.PrimaryMuscleGroupId))
-                    .ToListAsync(cancellationToken);
+            var exercises = await _context.Exercises.Where(e => request.ExerciseIds.Contains(e.Id))
+                .ToListAsync(cancellationToken);
 
             return exercises;
         }

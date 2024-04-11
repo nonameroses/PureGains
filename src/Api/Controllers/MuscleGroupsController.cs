@@ -12,7 +12,7 @@ public class MuscleGroupsController : Controller
 
     public MuscleGroupsController(IMediator mediator)
     {
-        _mediator = mediator;
+        _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator)); ;
     }
 
     [HttpGet("getMuscleGroups")]

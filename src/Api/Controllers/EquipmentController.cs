@@ -6,18 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 namespace Api.Controllers;
 [ApiController]
 [Route("[controller]")]
-public class EquipmentController : Controller
+public class EquipmentController(IMediator mediator) : Controller
 {
-    private readonly IMediator _mediator;
-
-    // Injecting dependency in the constructor
-    public EquipmentController(IMediator mediator)
-    {
-        _mediator = mediator;
-    }
+    private readonly IMediator _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
 
     [HttpGet("getEquipment")]
-    public async Task<IEnumerable<Equipment>> GetBooks()
+    public async Task<IEnumerable<Equipment>> GetEquipment()
     {
         var equipment = await _mediator.Send(new GetEquipment.Query());
 

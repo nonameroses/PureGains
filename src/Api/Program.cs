@@ -13,17 +13,6 @@ var builder = WebApplication.CreateBuilder(args);
 var domain = $"https://{builder.Configuration["Auth0:Domain"]}/";
 
 
-//builder.Services.AddAuthentication(options =>
-//{
-//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-//}).AddJwtBearer(options =>
-//{
-//    options.Authority = "https://dev-65pswrm4no6me7lw.uk.auth0.com/";
-//    options.Audience = "https://puregain.com";
-//});
-
-
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 .AddJwtBearer(options =>
 {
@@ -37,12 +26,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     };
 });
 
-//builder.Services.AddAuthorization(options =>
-//{
-//    options.AddPolicy("read:messages", policy => policy.Requirements.Add(new HasScopeRequirement("read:messages", domain)));
-//    options.AddPolicy("read:getusers", policy => policy.Requirements.Add(new HasScopeRequirement("read:getusers", domain)));
-//});
-
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("read:admin-messages", policy =>
@@ -51,12 +34,7 @@ builder.Services.AddAuthorization(options =>
     });
 });
 
-//builder.Services.AddAuthorization(options =>
-//{ 
-//    options.AddPolicy("read:messages", policy => policy.Requirements.Add(new
-//        HasScopeRequirement("read:messages", domain)));
-//    options.AddPolicy("read:admin-messages", policy => policy.Requirements.Add(new HasScopeRequirement("read:admin-messages", domain)));
-//});
+
 builder.Services.AddSingleton<IAuthorizationHandler, RbacHandler>();
 
 
