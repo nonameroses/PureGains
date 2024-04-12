@@ -11,26 +11,39 @@ public class UserController : Controller
 {
     private readonly IMediator _mediator;
 
-    // Injecting dependency in the constructor
     public UserController(IMediator mediator)
     {
         _mediator = mediator;
     }
 
     [HttpGet]
-    //[Authorize]
     public Task<User> GetUserById(string id)
     {
         var user = _mediator.Send(new GetUserById.Query(id));
 
         return user;
     }
-    [HttpPut]
-    //[Authorize]
 
+    [HttpPost]
+    public Task<bool> GetUserExists(string id)
+    {
+        var result = _mediator.Send(new GetUserExists.Query(id));
+
+
+        return result;
+    }
+    [HttpPut]
     public Task<User> CreateUser(User user)
     {
         var result = _mediator.Send(new AddUser.Command(user));
+
+        return result;
+    }
+
+    [HttpPost("deleteUser")]
+    public Task<Unit> DeleteUser(string id)
+    {
+        var result = _mediator.Send(new DeleteUser.Command(id));
 
         return result;
     }

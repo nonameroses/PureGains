@@ -48,7 +48,8 @@ public static class AddUser
                 GivenName = request.User.GivenName,
                 FamilyName = request.User.FamilyName,
                 Nickname = request.User.Nickname,
-                CreatedAt = DateTime.Now
+                CreatedAt = DateTime.Now,
+                IsProfileCreated = true
             };
 
             _context.Users.Add(user);
