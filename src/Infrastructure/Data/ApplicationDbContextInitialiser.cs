@@ -698,559 +698,605 @@ public class ApplicationDbContextInitialiser
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Kettlebell Row",
-                Priority = 2,
+                Name = "Kettlebell Rows",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = null,
-                Description = "Bend forward and pull the kettlebell towards your waist",
-                YoutubeUrl = "https://www.youtube.com/watch?v=u4sG54-HKJw"
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                Description = "Hold the kettlebell in one hand and row it towards your hip",
+                YoutubeUrl = "https://www.youtube.com/watch?v=vQRlGlNnKDw"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Kettlebell Deadlift",
-                Priority = 3,
+                Name = "Kettlebell Chest Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back and press the kettlebell from your chest to full extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=ktLKtjNdM9o"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Tricep Extensions",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the kettlebell overhead with both hands and lower it behind your head",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2L3ZO9XlRBk"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Shoulder Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Press the kettlebell overhead from shoulder height to full extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=9nGEt6vUIh8"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Goblet Squats",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a kettlebell at chest level and perform squats",
+                YoutubeUrl = "https://www.youtube.com/watch?v=MjdpR-TY6hA"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Lunges",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a kettlebell in each hand and perform lunges",
+                YoutubeUrl = "https://www.youtube.com/watch?v=qTNWGCGJNP0"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Step-Ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a kettlebell in each hand and step up onto a platform",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Wp7TkP8ZBgs"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Deadlifts",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
                 SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Lift the kettlebell from the ground to a standing position",
-                YoutubeUrl = "https://www.youtube.com/watch?v=-8JbTKR50rk"
+                Description = "Hold a kettlebell between your legs and perform deadlifts",
+                YoutubeUrl = "https://www.youtube.com/watch?v=YV8lZTOg0SM"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Single-Arm Kettlebell Row",
-                Priority = 4,
+                Name = "Kettlebell Swings",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Swing the kettlebell between your legs and up to chest level",
+                YoutubeUrl = "https://www.youtube.com/watch?v=YSxHifyI6s8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Rows",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = null,
-                Description = "Bend forward and pull the kettlebell with one arm",
-                YoutubeUrl = "https://www.youtube.com/watch?v=pYcpY20QaE8"
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                Description = "Hold the kettlebell in one hand and row it towards your hip",
+                YoutubeUrl = "https://www.youtube.com/watch?v=vQRlGlNnKDw"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Kettlebell High Pull",
-                Priority = 5,
+                Name = "Kettlebell Deadlifts",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = null,
-                Description = "Pull the kettlebell up to your shoulder, leading with your elbow",
-                YoutubeUrl = "https://www.youtube.com/watch?v=0B5JwVgFLP4"
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                Description = "Hold a kettlebell between your legs and perform deadlifts",
+                YoutubeUrl = "https://www.youtube.com/watch?v=YV8lZTOg0SM"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Kettlebell Renegade Row",
-                Priority = 5,
+                Name = "Kettlebell Swings",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                Description = "In a push-up position with hands on two kettlebells, row one kettlebell up while stabilizing your body with the other arm.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=Zp26q4BY5HE"
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                Description = "Swing the kettlebell between your legs and up to chest level",
+                YoutubeUrl = "https://www.youtube.com/watch?v=YSxHifyI6s8"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Dumbbell Row",
+                Name = "Kettlebell Clean and Press",
                 Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                Description = "Bend over a bench and row the dumbbell back towards your hip.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=pYcpY20QaE8"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Dumbbell Deadlift",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
-                Description = "Stand with feet hip-width apart, squat down to pick up the dumbbells, and stand up.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=ytGaGIn3SjE"
-            });
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Dumbbell Pullover",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                Description = "Lie on a bench holding a dumbbell with both hands above your chest, then lower it behind your head and bring it back up.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=0G2_XV7slIg"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Single Arm Dumbbell Deadlift",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
-                Description = "Perform a deadlift while holding a dumbbell in one hand, switching hands after a set.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=sq4VAZ1TtRw"
-            });
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Bent Over Two-Dumbbell Row",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                Description = "With a dumbbell in each hand, bend over at about a 45-degree angle and row the weights back towards your hips.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=L2fvpxrfJfQ"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Barbell Row",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                Description = "Bend over and pull the barbell towards your waist, keeping your back straight.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=G8l_8chR5BE"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Deadlift",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
-                Description = "Stand with your mid-foot under the barbell, bend over and grab it, then stand up with the weight.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=3UwO0fKukRw"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "T-Bar Row",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                Description = "Load one end of a barbell, straddle it, and row the bar towards your chest.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=j3Igk5nyZE4"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Barbell Good Morning",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
-                Description = "Hold a barbell on your shoulders behind your neck, then bend at the waist and return.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=PLHY2-nt-y4"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Rack Pulls",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
-                Description = "Set up a barbell at knee height in a rack, then perform deadlifts from this elevated position.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=K3izzg0RCTg"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Pull-Ups",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                Description = "Grip the bar with palms facing away from you and pull your body up until your chin is over the bar.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=eGo4IYlbE5g"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Chin-Ups",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                Description = "Grip the bar with palms facing towards you and pull your body up.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=brhRXlOhsAM"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Negative Pull-Ups",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = null,
-                Description = "Start at the top of the pull-up position and slowly lower yourself down with control.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=OYUxXMGVuuU"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Wide Grip Pull-Ups",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
                 SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Perform pull-ups with a wider than shoulder-width grip to target the lats more effectively.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=eGo4IYlbE5g"
+                Description = "Clean the kettlebell to shoulder height and then press it overhead",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2z7CFI25HkQ"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Hanging Leg Raise",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                Name = "Kettlebell Renegade Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Core"),
+                Description = "Get into a plank position with one hand on the kettlebell, row the kettlebell to your side and alternate arms",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2EJFNuGI2N8"
+            });
+
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Chest Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back and press the kettlebell from your chest to full extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=ktLKtjNdM9o"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Flyes",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back and perform flyes with the kettlebell",
+                YoutubeUrl = "https://www.youtube.com/watch?v=vQxDra1jBJM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Pullovers",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Lie on your back and hold the kettlebell overhead, lower it behind your head and then bring it back up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=-_r-MixuSho"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Push-ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                Description = "Perform push-ups with your hands on kettlebells",
+                YoutubeUrl = "https://www.youtube.com/watch?v=MRU5KsyYv5A"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Chest Squeeze Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                Description = "Hold two kettlebells together in front of your chest and press them together",
+                YoutubeUrl = "https://www.youtube.com/watch?v=h9TJWu8VN3k"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Tricep Extensions",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the kettlebell overhead with both hands and lower it behind your head",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2L3ZO9XlRBk"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Skull Crushers",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back and lower the kettlebell towards your forehead, then extend your arms back up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=K2gk9LGFa6A"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Overhead Tricep Extensions",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the kettlebell with both hands overhead and lower it behind your head, then extend your arms back up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=SG4JtvPlp4Y"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Kickbacks",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Bend over at the waist and extend the kettlebell behind you with one arm",
+                YoutubeUrl = "https://www.youtube.com/watch?v=UiDv3hNcvHk"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Close Grip Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                Description = "Lie on your back and hold the kettlebell with both hands close to your chest, then extend your arms up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=JItNYoBIbWM"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Shoulder Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Press the kettlebell overhead from shoulder height to full extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=9nGEt6vUIh8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Lateral Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a kettlebell in each hand and raise them out to the sides to shoulder height",
+                YoutubeUrl = "https://www.youtube.com/watch?v=W66xPqNRn7E"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Front Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a kettlebell in each hand and raise them in front of you to shoulder height",
+                YoutubeUrl = "https://www.youtube.com/watch?v=ZlvKIkgHJlY"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell High Pulls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Pull the kettlebell up to shoulder height with elbows high",
+                YoutubeUrl = "https://www.youtube.com/watch?v=WLYrY6vIxsg"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Upright Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Hold a kettlebell in each hand and raise them up under your chin",
+                YoutubeUrl = "https://www.youtube.com/watch?v=BGMjcDgqNX0"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Bicep Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a kettlebell in each hand with arms straight, curl the weights up to shoulder height",
+                YoutubeUrl = "https://www.youtube.com/watch?v=-lZu4l7t6E0"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Hammer Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a kettlebell in each hand with palms facing each other, curl the weights up to shoulder height",
+                YoutubeUrl = "https://www.youtube.com/watch?v=9kiSe1URJ8A"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Preacher Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on a bench and place your elbows on the inside of your knees, curl the kettlebell up to your chest",
+                YoutubeUrl = "https://www.youtube.com/watch?v=ftfJ0ZqA1V8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Concentration Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on a bench and hold the kettlebell with one hand, curl the weight up towards your shoulder",
+                YoutubeUrl = "https://www.youtube.com/watch?v=5_Lqkgj2-m0"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Drag Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a kettlebell in each hand with palms facing backwards, curl the weights up to shoulder height",
+                YoutubeUrl = "https://www.youtube.com/watch?v=75tmOYlGU3Q"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Russian Twists with Kettlebell",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Hang from the bar and raise your legs to 90 degrees or higher.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=hdng3Nm1x_E"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Band Pull Aparts",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Hold a resistance band in front of you and pull it apart until it touches your chest.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=JObYtU7Y7ag"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Seated Row with Band",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                Description = "Sit on the floor, legs extended, with a band wrapped around your feet. Row the band towards your waist.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=GZbfZ033f74"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Banded Deadlifts",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
-                Description = "Stand on a band with feet shoulder-width apart, grab the ends, and stand up straight.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=lFqAijL2rJ4"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Bent-Over Band Rows",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                Description = "Stand on a band, hinge at the waist, and row the ends towards your waist.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=rloXYB8M3vU"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Banded Good Mornings",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
-                Description = "Place a band under your feet and over your shoulders. Bend at the hips to lower your torso, then stand back up.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=CTRaCzE8pWU"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Inverted Rows",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                Description = "Using a low bar or rings, pull yourself up from a horizontal position.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=dvkIaarnf0g"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Back Extensions",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
                 SecondaryMuscleGroup = null,
-                Description = "Lie face down on the ground or a hyperextension bench and lift your upper body.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=ph3pddpKzzw"
-            });
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Reverse Snow Angels",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Lie face down and move your arms from your sides to overhead in a snow angel motion while keeping your arms straight and off the ground.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=2VmprBYtCug",
+                Description = "Sit on the floor, hold a kettlebell with both hands, and twist your torso from side to side",
+                YoutubeUrl = "https://www.youtube.com/watch?v=0bnclWtiIIs"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Superman",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
-                Description = "Lie face down on the ground, extend your arms in front of you, and simultaneously lift your arms, chest, and legs off the ground.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=z6PJMT2y8GQ"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Plank with Arm Lift",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                Description = "Get into a plank position and lift one arm straight out in front of you, alternate arms while maintaining plank position.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=RDxjPjIrmcE"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Bench Hyperextensions",
+                Name = "Kettlebell Windmills",
                 Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
-                Description = "Lie face down on a bench with your hips at the edge so your upper body can move freely. Lower and raise your torso.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=qtjJUWCnDyE"
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a kettlebell overhead with one arm and touch your opposite foot with the free hand",
+                YoutubeUrl = "https://www.youtube.com/watch?v=OqnszD0AhcU"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Incline Bench Row",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                Name = "Kettlebell Turkish Get-ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back, hold a kettlebell overhead, and perform a series of movements to stand up and then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=0bWRPC49-KI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Plank Drags",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Get into a plank position with one hand on a kettlebell, drag the kettlebell to the other side and alternate arms",
+                YoutubeUrl = "https://www.youtube.com/watch?v=6N71K8LbR7Q"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Sit-up and Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                Description = "Perform a sit-up while holding a kettlebell and press the kettlebell overhead at the top of the movement",
+                YoutubeUrl = "https://www.youtube.com/watch?v=4RQzdJg7Oqs"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Turkish Get-ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back, hold a kettlebell overhead, and perform a series of movements to stand up and then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=0bWRPC49-KI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Swings",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Swing the kettlebell between your legs and up to chest level",
+                YoutubeUrl = "https://www.youtube.com/watch?v=YSxHifyI6s8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Goblet Squats",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a kettlebell at chest level and perform squats",
+                YoutubeUrl = "https://www.youtube.com/watch?v=MjdpR-TY6hA"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Renegade Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Core"),
+                Description = "Get into a plank position with one hand on the kettlebell, row the kettlebell to your side and alternate arms",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2EJFNuGI2N8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kettlebell Clean and Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                Description = "Clean the kettlebell to shoulder height and then press it overhead",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2z7CFI25HkQ"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Squats",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a dumbbell in each hand and perform squats",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Q5eUgpQUtPc"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Lunges",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a dumbbell in each hand and perform lunges",
+                YoutubeUrl = "https://www.youtube.com/watch?v=QOVaHwm-Q6U"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Step-ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a dumbbell in each hand and step up onto a platform",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Cd0c63OF6jc"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Deadlifts",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Hold a dumbbell in each hand and perform deadlifts",
+                YoutubeUrl = "https://www.youtube.com/watch?v=5mXLx_fo0CA"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Bulgarian Split Squats",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a dumbbell in each hand and perform split squats with one foot elevated",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2C-uNgKwPLE"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
                 SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                Description = "Lay chest down on an incline bench and row dumbbells towards your waist.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=HsD1vMzp9lI"
+                Description = "Hold a dumbbell in one hand and row it towards your hip",
+                YoutubeUrl = "https://www.youtube.com/watch?v=wvAuiMrG4wQ"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Decline Bench Dumbbell Pull-Over",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                Name = "Dumbbell Deadlifts",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                Description = "Hold a dumbbell in each hand and perform deadlifts",
+                YoutubeUrl = "https://www.youtube.com/watch?v=5mXLx_fo0CA"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Renegade Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Core"),
+                Description = "Get into a plank position with one hand on a dumbbell, row the dumbbell to your side and alternate arms",
+                YoutubeUrl = "https://www.youtube.com/watch?v=dwh-yzjaaZ0"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Pullovers",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
                 SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                Description = "Lying on a decline bench, hold a dumbbell with both hands above your chest and lower it behind your head.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=FVjtOSA-dz8"
+                Description = "Lie on your back and hold a dumbbell overhead, lower it behind your head and then bring it back up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=HQmF8k6f7ys"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Bench Prone Cobra",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Lie face down on a bench with arms hanging down. Lift your chest and arms up, squeezing your shoulder blades together.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=example"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Reverse Hyperextension on Bench",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
-                Description = "Lie face down on a bench with your legs hanging off the edge. Lift your legs up and back, focusing on contracting your lower back and glutes.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=example"
-            });
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Plate Bent Over Row",
+                Name = "Dumbbell Shrugs",
                 Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                Description = "Hold a weight plate with both hands, bend at your waist and row the plate towards your stomach.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Plate Deadlift",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
-                Description = "Stand with feet hip-width apart, squat down and lift a weight plate from the ground to a standing position.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Standing Plate Shrug",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
                 SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Hold a weight plate in each hand at your sides and shrug your shoulders to work the traps.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Hold a dumbbell in each hand and shrug your shoulders upwards",
+                YoutubeUrl = "https://www.youtube.com/watch?v=zRCM5pCE1Mo"
             });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Plate Good Mornings",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
-                Description = "Hold a weight plate against your chest, bend forward at your waist with a slight bend in your knees, then return to standing.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Reverse Snow Angels with Plate",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Lie face down on the floor holding a lightweight plate in each hand, perform a reverse snow angel motion by moving your arms from your sides to overhead.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Bench Press",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Lie on a bench and press the kettlebells up, keeping your palms facing each other.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Flyes",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Lie on a bench, hold kettlebells in each hand above your chest with a slight bend in your elbows, then lower them out to the sides and bring them back.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Pullover",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Lie on your back, hold a kettlebell with both hands above your chest, then lower it behind your head and bring it back up.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Single Arm Kettlebell Bench Press",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Lie on a bench and press one kettlebell up, alternating arms.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Pushup",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Place two kettlebells on the ground and perform pushups, using the kettlebells as handles.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Bench Press",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Lie on a bench and press the kettlebells up, keeping your palms facing each other.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Flyes",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Lie on a bench, hold kettlebells in each hand above your chest with a slight bend in your elbows, then lower them out to the sides and bring them back.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Pullover",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Lie on your back, hold a kettlebell with both hands above your chest, then lower it behind your head and bring it back up.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Single Arm Kettlebell Bench Press",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Lie on a bench and press one kettlebell up, alternating arms.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Pushup",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Place two kettlebells on the ground and perform pushups, using the kettlebells as handles.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
 
             _context.Exercises.Add(new Exercise()
             {
@@ -1258,55 +1304,387 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Lie on a bench and press the dumbbells up from your chest until your arms are straight.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                SecondaryMuscleGroup = null,
+                Description = "Lie on a bench and press the dumbbells from your chest to full extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=rra7u4Yf6jk"
             });
 
             _context.Exercises.Add(new Exercise()
             {
                 Name = "Dumbbell Flyes",
-                Priority = 2,
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Lie on a bench, extend your arms above your chest with a dumbbell in each hand, then lower your arms out to the sides and bring them back together.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                SecondaryMuscleGroup = null,
+                Description = "Lie on a bench and perform flyes with the dumbbells",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Iqu4ROFGWC4"
             });
 
             _context.Exercises.Add(new Exercise()
             {
                 Name = "Incline Dumbbell Press",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Sit on an incline bench and press the dumbbells from shoulder height until your arms are straight above you.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Dumbbell Decline Press",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Lie on a decline bench and press the dumbbells up from your chest until your arms are straight.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Dumbbell Around The World",
-                Priority = 5,
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
                 SecondaryMuscleGroup = null,
-                Description = "Lie on a flat bench with a dumbbell in each hand at your sides. Circle the weights up above your chest and then back down in a wide arc.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Lie on an incline bench and press the dumbbells from your chest to full extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Hd1rK4G1sI8"
             });
 
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Pullovers",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Lie on your back and hold a dumbbell overhead, lower it behind your head and then bring it back up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=HQmF8k6f7ys"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Chest Squeeze Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                Description = "Hold two dumbbells together in front of your chest and press them together",
+                YoutubeUrl = "https://www.youtube.com/watch?v=7zMbqPnczJg"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Tricep Kickbacks",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a dumbbell in each hand, lean forward, and extend your arms back",
+                YoutubeUrl = "https://www.youtube.com/watch?v=lK7IzptwoWQ"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Tricep Extensions",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a dumbbell with both hands overhead and lower it behind your head",
+                YoutubeUrl = "https://www.youtube.com/watch?v=VcYCbB4o3SQ"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Skull Crushers",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back and lower the dumbbells towards your forehead, then extend your arms back up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2-LAMcpzODU"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Close Grip Bench Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                Description = "Hold dumbbells close together and perform a bench press",
+                YoutubeUrl = "https://www.youtube.com/watch?v=HNqoRP1hZCI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Overhead Tricep Extensions",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a dumbbell with both hands overhead and extend your arms up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=JEZmmVAVl1M"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Shoulder Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Press the dumbbells overhead from shoulder height to full extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=7MGlzDcWvuE"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Lateral Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a dumbbell in each hand and raise them out to the sides to shoulder height",
+                YoutubeUrl = "https://www.youtube.com/watch?v=EmvNOLP7lqo"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Front Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a dumbbell in each hand and raise them in front of you to shoulder height",
+                YoutubeUrl = "https://www.youtube.com/watch?v=9VTJzVUvzdg"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Arnold Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold dumbbells at shoulder height with palms facing you, press them overhead and twist your palms away at the top",
+                YoutubeUrl = "https://www.youtube.com/watch?v=vj2w851ZHRM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Shrugs",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Hold a dumbbell in each hand and shrug your shoulders upwards",
+                YoutubeUrl = "https://www.youtube.com/watch?v=I27ybOmjV0A"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Russian Twists",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the floor, hold a dumbbell with both hands, and twist your torso from side to side",
+                YoutubeUrl = "https://www.youtube.com/watch?v=5kwW0N8nx8s"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Side Bends",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand upright and hold a dumbbell in one hand, bend to the side",
+                YoutubeUrl = "https://www.youtube.com/watch?v=K_1BHqzXNCM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Woodchoppers",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a dumbbell with both hands and perform a diagonal chopping motion",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Gz4fOUeyxVs"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Sit-up and Twist",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a dumbbell in both hands, perform a sit-up, and twist your torso at the top",
+                YoutubeUrl = "https://www.youtube.com/watch?v=9SGg6Qn4WJY"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Leg Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back, hold a dumbbell between your feet, and raise your legs up and down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=-gSSQJAUncU"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Thrusters",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a dumbbell in each hand at shoulder height, squat down, and then press the dumbbells overhead as you stand up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=c65quxVtYrM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Renegade Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Core"),
+                Description = "Get into a plank position with one hand on a dumbbell, row the dumbbell to your side and alternate arms",
+                YoutubeUrl = "https://www.youtube.com/watch?v=dwh-yzjaaZ0"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Burpees",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold dumbbells in each hand, squat down, kick your feet back into a push-up position, return to squat position, and stand up while pressing the dumbbells overhead",
+                YoutubeUrl = "https://www.youtube.com/watch?v=GvibHzbzXao"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Walking Lunges",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a dumbbell in each hand and perform walking lunges",
+                YoutubeUrl = "https://www.youtube.com/watch?v=hCm7g0-CIoc"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Clean and Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                Description = "Clean the dumbbells to shoulder height and then press them overhead",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2z7CFI25HkQ"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Squats",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Place a barbell on your upper back, squat down, and then stand back up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Dy28eq2PjcM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Lunges",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a barbell across your upper back and perform lunges",
+                YoutubeUrl = "https://www.youtube.com/watch?v=QOVaHwm-Q6U"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Deadlifts",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Stand with a barbell on the floor, bend at the hips and knees to lower down, and then stand back up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=-4qRntuXBSc"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Step-ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a barbell across your upper back and step up onto a platform",
+                YoutubeUrl = "https://www.youtube.com/watch?v=MBJtxg8sBb8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Bulgarian Split Squats",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a barbell across your upper back and perform split squats with one foot elevated",
+                YoutubeUrl = "https://www.youtube.com/watch?v=1xMaFsW1Qx4"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Bent Over Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                Description = "Hold a barbell with an overhand grip, bend forward at the waist, and row the barbell towards your lower chest",
+                YoutubeUrl = "https://www.youtube.com/watch?v=G8l_8chR5BE"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Deadlifts",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                Description = "Stand with a barbell on the floor, bend at the hips and knees to lower down, and then stand back up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=-4qRntuXBSc"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Pull-ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                Description = "Attach a barbell to a pull-up bar and perform pull-ups",
+                YoutubeUrl = "https://www.youtube.com/watch?v=eGo4IYlbE5g"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Shrugs",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                Description = "Hold a barbell with an overhand grip and shrug your shoulders upwards",
+                YoutubeUrl = "https://www.youtube.com/watch?v=C9UWujtiACs"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Good Mornings",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Hamstrings"),
+                Description = "Hold a barbell across your upper back, bend forward at the hips while keeping your back straight, and then return to standing",
+                YoutubeUrl = "https://www.youtube.com/watch?v=uHcXPcma09k"
+            });
 
             _context.Exercises.Add(new Exercise()
             {
@@ -1314,109 +1692,1313 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Lie on a bench and press a barbell up from your chest until your arms are straight.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                SecondaryMuscleGroup = null,
+                Description = "Lie on a bench and lower the barbell to your chest, then press it back up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=VmB1G1K7v94"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Incline Barbell Press",
-                Priority = 2,
+                Name = "Barbell Incline Bench Press",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Lie on an incline bench and press a barbell from chest height until your arms are straight.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                SecondaryMuscleGroup = null,
+                Description = "Lie on an incline bench and lower the barbell to your upper chest, then press it back up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=GUcb7X1F5SU"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Decline Barbell Press",
-                Priority = 3,
+                Name = "Barbell Decline Bench Press",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Lie on a decline bench and press a barbell up from your chest until your arms are straight.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                SecondaryMuscleGroup = null,
+                Description = "Lie on a decline bench and lower the barbell to your lower chest, then press it back up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=nhpWETtkFg8"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Barbell Pullover",
-                Priority = 4,
+                Name = "Barbell Chest Press",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Lie on your back on a bench, hold a barbell with both hands above your chest, then lower it behind your head and bring it back up.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                SecondaryMuscleGroup = null,
+                Description = "Lie on the floor and press the barbell up from your chest to full extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=qyG2-NE76WI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Floor Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on the floor and press the barbell up from your chest to full extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=shsA2GivvGE"
             });
 
             _context.Exercises.Add(new Exercise()
             {
                 Name = "Close Grip Barbell Bench Press",
-                Priority = 5,
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Lie on a bench and press a barbell up from your chest with your hands closer together than in a regular bench press.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                Description = "Perform a bench press with a narrow grip to target the triceps",
+                YoutubeUrl = "https://www.youtube.com/watch?v=fVmcD8pGJpk"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Tricep Extensions",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the barbell with an overhand grip above your head, lower it behind your head, and then extend your arms",
+                YoutubeUrl = "https://www.youtube.com/watch?v=icFfvck0fBg"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Skull Crushers (Barbell)",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on a bench and lower the barbell towards your forehead, then extend your arms to press it back up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=IzTVG5ufqfU"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Overhead Tricep Extensions",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the barbell with both hands overhead and extend your arms up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=JqHbgIXnGzI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Tricep Dips",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                Description = "Use parallel bars to perform dips, keeping your elbows close to your body to target the triceps",
+                YoutubeUrl = "https://www.youtube.com/watch?v=4dF1DOWzf20"
             });
 
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Chest Pull-up",
+                Name = "Barbell Overhead Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Press the barbell overhead from shoulder height to full extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=CnBmiBqp-AI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Upright Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Traps"),
+                Description = "Hold the barbell with an overhand grip and raise it towards your chin, keeping it close to your body",
+                YoutubeUrl = "https://www.youtube.com/watch?v=SJrMCOkWbKU"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Front Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the barbell with an overhand grip and raise it in front of you to shoulder height",
+                YoutubeUrl = "https://www.youtube.com/watch?v=0tT2zokJLW4"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Shrugs",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Hold the barbell with an overhand grip and shrug your shoulders upwards",
+                YoutubeUrl = "https://www.youtube.com/watch?v=C9UWujtiACs"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Push Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Perform a slight dip with your legs and then explosively press the barbell overhead",
+                YoutubeUrl = "https://www.youtube.com/watch?v=nvcqaUed910"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Rollouts",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Kneel on the floor, hold the barbell with both hands, and roll it forward until your body is fully extended, then roll it back",
+                YoutubeUrl = "https://www.youtube.com/watch?v=0dMzSIlD_-8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Russian Twists",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the floor, hold the barbell with both hands, and rotate your torso from side to side",
+                YoutubeUrl = "https://www.youtube.com/watch?v=gdcstKSGI8Y"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Sit-ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back, hold the barbell on your chest, and perform sit-ups",
+                YoutubeUrl = "https://www.youtube.com/watch?v=9VeO2GfcSuI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Leg Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hang from a barbell and raise your legs up towards your chest",
+                YoutubeUrl = "https://www.youtube.com/watch?v=JB2oyawG9KI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Lying Twists",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back with your legs bent, hold the barbell above your chest, and twist your torso from side to side",
+                YoutubeUrl = "https://www.youtube.com/watch?v=0xqfuL2ooDw"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Squat and Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the barbell at shoulder height, squat down, and then press the barbell overhead as you stand up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=c65quxVtYrM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Deadlift and Row",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Perform a deadlift, then bend forward and row the barbell towards your lower chest",
+                YoutubeUrl = "https://www.youtube.com/watch?v=PGO5KF3BNnM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Clean and Jerk",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Clean the barbell to shoulder height and then jerk it overhead in one explosive motion",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2z7CFI25HkQ"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Thrusters",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the barbell at shoulder height, squat down, and then press the barbell overhead as you stand up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Y2PIgEo_Rd4"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Lunges with Rotation",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the barbell overhead and perform lunges, rotating your torso to the side as you lunge",
+                YoutubeUrl = "https://www.youtube.com/watch?v=5jD3fHDtQ2Y"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Squats",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the plate at chest height and squat down, then stand back up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=xDddiEwB6Uk"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Lunges",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the plate overhead or at chest height and perform lunges",
+                YoutubeUrl = "https://www.youtube.com/watch?v=0D6qZcKADv0"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Step-ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the plate at chest height and step onto a platform, then step back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=UW1r1Sb4E_Y"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Calf Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the plate in your hands and perform calf raises",
+                YoutubeUrl = "https://www.youtube.com/watch?v=hyv14e2QDq0"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Sumo Squats",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the plate at chest height and perform sumo squats",
+                YoutubeUrl = "https://www.youtube.com/watch?v=UTfVVaxKM9E"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Bent Over Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                Description = "Hold the plate with both hands and bend forward at the waist, then row the plate towards your lower chest",
+                YoutubeUrl = "https://www.youtube.com/watch?v=LfjOcpkHfRQ"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Deadlifts",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                Description = "Hold the plate with both hands and stand up with a straight back, then lower back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=1Jl2MfiQcEw"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Pullovers",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                Description = "Lie on a bench and hold the plate with both hands overhead, then lower it behind your head and back up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=tcl4TYnn0rI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Renegade Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Core"),
+                Description = "Get into a plank position with both hands on the plate, row one arm up towards your chest, then alternate",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Og0z3P-USts"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Shrugs",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                Description = "Hold the plate with both hands and shrug your shoulders upwards",
+                YoutubeUrl = "https://www.youtube.com/watch?v=FxYEcckvAeA"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back and press the plate upwards from your chest to full extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=qK9XJdZUv8E"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Chest Flyes",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back and hold the plate with slightly bent arms, then open your arms out to the sides and bring them back together",
+                YoutubeUrl = "https://www.youtube.com/watch?v=v7VB4aFd7fQ"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Push-Ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                Description = "Perform push-ups with your hands on the plate",
+                YoutubeUrl = "https://www.youtube.com/watch?v=sBNd-cwE7WY"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Squeeze Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                Description = "Lie on your back and hold the plate with both hands, then press the plate together as hard as possible",
+                YoutubeUrl = "https://www.youtube.com/watch?v=wwe0GwpRu88"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Bench Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back and hold the plate with both hands, then press it upwards from your chest to full extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=dqucuyHBVOk"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Tricep Extensions",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the plate overhead with both hands and lower it behind your head, then extend your arms to raise it back up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=bJ_RPAmN4nU"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Skull Crushers",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back and hold the plate with both hands, then lower it towards your forehead and extend your arms to raise it back up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2yjwXTZQDDI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Overhead Tricep Extensions",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the plate overhead with both hands and extend your arms upwards",
+                YoutubeUrl = "https://www.youtube.com/watch?v=8AdBJg2xoDI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Tricep Dips",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Perform dips with your hands on the plate",
+                YoutubeUrl = "https://www.youtube.com/watch?v=glbve8G3f5o"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Tricep Kickbacks",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the plate with one hand and extend your arm backwards, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=4Yc0rOQ2Yi0"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Front Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the plate with both hands and raise it in front of you to shoulder height",
+                YoutubeUrl = "https://www.youtube.com/watch?v=mg91xw8zokY"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Lateral Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the plate with both hands at your sides and raise it out to the sides to shoulder height",
+                YoutubeUrl = "https://www.youtube.com/watch?v=rnrAUFJl4Gs"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Shoulder Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the plate with both hands at shoulder height and press it overhead",
+                YoutubeUrl = "https://www.youtube.com/watch?v=qEwKCR5JCog"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Shoulder Shrugs",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the plate with both hands at your sides and shrug your shoulders upwards",
+                YoutubeUrl = "https://www.youtube.com/watch?v=0Z6yf5-ntU8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Arnold Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the plate with both hands and start with the plate in front of you, then press it overhead while rotating your hands",
+                YoutubeUrl = "https://www.youtube.com/watch?v=6Z15_WdXm5E"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the plate with both hands and curl it towards your shoulders",
+                YoutubeUrl = "https://www.youtube.com/watch?v=tojvzGWnn3Y"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Hammer Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the plate with both hands and curl it towards your shoulders with a neutral grip",
+                YoutubeUrl = "https://www.youtube.com/watch?v=w6ntZ7Mjw-0"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Preacher Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Rest your arms on a preacher bench and hold the plate with an underhand grip, then curl it towards your shoulders",
+                YoutubeUrl = "https://www.youtube.com/watch?v=JpUzkbZ7Tr8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Reverse Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Forearms"),
+                Description = "Hold the plate with both hands and curl it towards your shoulders with an overhand grip",
+                YoutubeUrl = "https://www.youtube.com/watch?v=TMcWwBxyq_4"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Concentration Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on a bench with your elbow resting on your thigh and hold the plate with one hand, then curl it towards your shoulder",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Jm1CW9YqCb0"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Woodchoppers",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the plate with both hands and rotate your torso as you bring the plate from one side of your body to the other",
+                YoutubeUrl = "https://www.youtube.com/watch?v=4xfHrB3azTk"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Russian Twists",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the floor and hold the plate with both hands, then rotate your torso from side to side",
+                YoutubeUrl = "https://www.youtube.com/watch?v=DQ8PnZsDHik"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Overhead Lunges",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the plate overhead with both hands and perform lunges",
+                YoutubeUrl = "https://www.youtube.com/watch?v=ZX4ZPjk2ztw"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Squat Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the plate at chest height and squat down, then press the plate overhead as you stand up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=wHlj5vkAHTo"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Plate Burpees",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold the plate in your hands and perform a burpee, jumping with the plate overhead",
+                YoutubeUrl = "https://www.youtube.com/watch?v=k9v9lxjR0LY"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                Description = "Hang from the bar with an overhand grip and pull yourself up until your chin is above the bar",
+                YoutubeUrl = "https://www.youtube.com/watch?v=eGo4IYlbE5g"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Chin-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                Description = "Hang from the bar with an underhand grip and pull yourself up until your chin is above the bar",
+                YoutubeUrl = "https://www.youtube.com/watch?v=6kALZikXxLc"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Wide Grip Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                Description = "Hang from the bar with a wider than shoulder-width grip and pull yourself up until your chin is above the bar",
+                YoutubeUrl = "https://www.youtube.com/watch?v=QvWxw3HjFWA"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Narrow Grip Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                Description = "Hang from the bar with a shoulder-width grip and pull yourself up until your chin is above the bar",
+                YoutubeUrl = "https://www.youtube.com/watch?v=sb1VpPtoQ4Q"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Commando Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                Description = "Hang from the bar with one hand facing forward and the other facing backward, then pull yourself up until your chin is above the bar",
+                YoutubeUrl = "https://www.youtube.com/watch?v=mJScZaL3ErM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Chin-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Hang from the bar with an underhand grip and pull yourself up until your chin is above the bar",
+                YoutubeUrl = "https://www.youtube.com/watch?v=6kALZikXxLc"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Hammer Grip Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Hang from the bar with a neutral grip and pull yourself up until your chin is above the bar",
+                YoutubeUrl = "https://www.youtube.com/watch?v=jCg4I9JHInQ"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Towel Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Forearms"),
+                Description = "Hang towels over the bar and grab them with an underhand grip, then pull yourself up until your chin is above the bar",
+                YoutubeUrl = "https://www.youtube.com/watch?v=4P4bDoe-FIk"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Mixed Grip Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Hang from the bar with one hand in an overhand grip and the other in an underhand grip, then pull yourself up until your chin is above the bar",
+                YoutubeUrl = "https://www.youtube.com/watch?v=IP5E2xl87MM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Close Grip Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Hang from the bar with a narrow grip and pull yourself up until your chin is above the bar",
+                YoutubeUrl = "https://www.youtube.com/watch?v=BjzdRW7fgLI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Wide Grip Pull-up",
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
                 SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Perform a pull-up but focus on bringing your chest to the bar by leaning back slightly.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Hang from the bar with a wider than shoulder-width grip and pull yourself up until your chin is above the bar",
+                YoutubeUrl = "https://www.youtube.com/watch?v=QvWxw3HjFWA"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Around The World Pull-ups",
-                Priority = 2,
+                Name = "Close Grip Pull-up",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
                 SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Start with a regular pull-up, then move in a circular motion bringing your chest towards one hand, then up and over to the other side.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Hang from the bar with a narrow grip and pull yourself up until your chin is above the bar",
+                YoutubeUrl = "https://www.youtube.com/watch?v=BjzdRW7fgLI"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Clapping Pull-up",
-                Priority = 3,
+                Name = "Archer Pull-up",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
                 SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Perform an explosive pull-up and clap your hands together above the bar before catching yourself on the way down.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Hang from the bar with one hand and extend the other arm out to the side, then pull yourself up until your chin is above the bar while keeping the other arm straight",
+                YoutubeUrl = "https://www.youtube.com/watch?v=brFMpUivIIo"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Weighted Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Attach a weight belt with added resistance and pull yourself up until your chin is above the bar",
+                YoutubeUrl = "https://www.youtube.com/watch?v=6kxGcNhOa-M"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Kipping Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Use a swinging motion to gain momentum and pull yourself up until your chin is above the bar",
+                YoutubeUrl = "https://www.youtube.com/watch?v=SR_c7m1zbl8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Close Grip Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Hang from the bar with a narrow grip and pull yourself up until your chin is above the bar",
+                YoutubeUrl = "https://www.youtube.com/watch?v=BjzdRW7fgLI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Neutral Grip Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Hang from the bar with a neutral grip and pull yourself up until your chin is above the bar",
+                YoutubeUrl = "https://www.youtube.com/watch?v=1Zg6aLR2S6o"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Parallel Bar Dip",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold onto parallel bars and lower yourself down until your elbows are at 90-degree angles, then push yourself back up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=8xwog0HjjH4"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Negative Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Jump up to the bar and slowly lower yourself down, focusing on the negative portion of the movement",
+                YoutubeUrl = "https://www.youtube.com/watch?v=0p0o7XTbjN0"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Tricep Pull-down",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Attach a resistance band to the bar and pull it down with straight arms, focusing on contracting the triceps",
+                YoutubeUrl = "https://www.youtube.com/watch?v=0gZGMzzlZbM"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Pull-up with Knee Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Core"),
+                Description = "Perform a pull-up while simultaneously raising your knees towards your chest, engaging the shoulders and core",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2_AqvoRRxIM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Commando Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Hang from the bar with one hand facing forward and the other facing backward, then pull yourself up until your chin is above the bar",
+                YoutubeUrl = "https://www.youtube.com/watch?v=mJScZaL3ErM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Wide Grip Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Hang from the bar with a wider than shoulder-width grip and pull yourself up until your chin is above the bar",
+                YoutubeUrl = "https://www.youtube.com/watch?v=QvWxw3HjFWA"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Behind the Neck Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Perform a pull-up while pulling yourself up towards the bar behind your neck",
+                YoutubeUrl = "https://www.youtube.com/watch?v=n7n5wVTcWZs"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "L-sit Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Core"),
+                Description = "Perform a pull-up while maintaining an L-sit position, engaging the shoulders and core",
+                YoutubeUrl = "https://www.youtube.com/watch?v=v2KGmUw59-o"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Hanging Leg Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hang from the bar and raise your legs until they are parallel to the ground, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=JB2oyawG9KI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Hanging Knee Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hang from the bar and raise your knees towards your chest, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=swjnuXoMe3E"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Windshield Wipers",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Obliques"),
+                Description = "Hang from the bar and rotate your legs from side to side while keeping them straight, mimicking the motion of windshield wipers",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2eUBaxO-QAw"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Toes to Bar",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Hang from the bar and raise your legs until your toes touch the bar, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=y3niFzo5VLI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "L-sit Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                Description = "Perform a pull-up while maintaining an L-sit position, engaging the abs and shoulders",
+                YoutubeUrl = "https://www.youtube.com/watch?v=v2KGmUw59-o"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Assisted Pull-up with Band",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Attach a resistance band to the bar and place one foot in it for assistance, then perform a pull-up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=kp4ymGZiAJY"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Jumping Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                Description = "Jump up to the bar and pull yourself up until your chin is above the bar, using your legs for assistance",
+                YoutubeUrl = "https://www.youtube.com/watch?v=DqMKSK6YdGI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Hanging Leg Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                Description = "Hang from the bar and raise your legs until they are parallel to the ground, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=JB2oyawG9KI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Toes to Bar",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                Description = "Hang from the bar and raise your legs until your toes touch the bar, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=y3niFzo5VLI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "L-sit Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                Description = "Perform a pull-up while maintaining an L-sit position, engaging the legs and abs",
+                YoutubeUrl = "https://www.youtube.com/watch?v=v2KGmUw59-o"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Burpee Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Perform a burpee and then jump up to grab the bar and perform a pull-up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=h6ldL9Vd-j8"
             });
 
             _context.Exercises.Add(new Exercise()
             {
                 Name = "Muscle-up",
-                Priority = 4,
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Perform a pull-up followed by a dip, transitioning from below to above the bar in one fluid motion.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Perform a pull-up and transition into a dip at the top of the movement",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Q7I1JQVmYN8"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Straight Bar Dips",
-                Priority = 5,
+                Name = "L-sit Pull-up",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                Description = "Perform a pull-up while maintaining an L-sit position, engaging the full body and abs",
+                YoutubeUrl = "https://www.youtube.com/watch?v=v2KGmUw59-o"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Behind the Neck Pull-up",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                Description = "Perform a pull-up while pulling yourself up towards the bar behind your neck, engaging the full body and shoulders",
+                YoutubeUrl = "https://www.youtube.com/watch?v=n7n5wVTcWZs"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Assisted Pull-up with Band",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                Description = "Attach a resistance band to the bar and place one foot in it for assistance, then perform a pull-up",
+                YoutubeUrl = "https://www.youtube.com/watch?v=kp4ymGZiAJY"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Pull-ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                Description = "Lie face-up on a bench and grab the barbell from a rack, pull yourself up until your chest touches the bar, then lower yourself back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=78q_B0CGRIE"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Incline Bench Pull-ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                Description = "Lie face-up on an incline bench and grab the barbell from a rack, pull yourself up until your chest touches the bar, then lower yourself back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=_9yrDv57WO8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Bench Pull-overs",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                Description = "Lie face-up on a bench and hold a dumbbell with both hands, lower the weight behind your head until your arms are parallel to the ground, then pull the weight back over your chest",
+                YoutubeUrl = "https://www.youtube.com/watch?v=heF1JJWjcOQ"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Barbell Rows on Bench",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                Description = "Lie face-down on a bench with a barbell on the floor, grab the barbell with an overhand grip and row it up to your chest, then lower it back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=ItVGp-q4IP4"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Bench Supported Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                Description = "Lie face-down on an incline bench and hold a dumbbell in each hand, row the weights up to your sides, squeezing your shoulder blades together at the top, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=g5D25DceJfU"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Bicep Curls on Bench",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the edge of a bench with a dumbbell in each hand, curl the weights up towards your shoulders, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=ngmjvU7W4cQ"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Incline Dumbbell Hammer Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie face-up on an incline bench with a dumbbell in each hand, curl the weights up with a neutral grip, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=3qjprkCJi-g"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Zottman Curls on Bench",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the edge of a bench with a dumbbell in each hand, curl the weights up with a supinated grip, then rotate your wrists to a pronated grip and lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=FV0xmd4kU1k"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Concentration Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the edge of a bench with a dumbbell in one hand, rest your elbow on your inner thigh and curl the weight up towards your shoulder, then lower it back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=cPkPwIetCDo"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Reverse Curl on Bench",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Forearms"),
+                Description = "Sit on the edge of a bench with a barbell in front of you, grip the bar with an overhand grip and curl it up towards your shoulders, then lower it back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=8YXw-3SqFsQ"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
                 SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Using a straight or parallel bar, perform dips with a slight forward lean to emphasize the chest.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Lie on a flat bench and grip the barbell slightly wider than shoulder-width, lower the bar to your chest, then press it back up to full arm extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=EHx1gYTA-Rw"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Incline Bench Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                Description = "Lie on an incline bench with the backrest raised to about a 45-degree angle, grip the barbell slightly wider than shoulder-width, lower the bar to your upper chest, then press it back up to full arm extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=aoN0HCp7qLY"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Decline Bench Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                Description = "Lie on a decline bench with the backrest angled downward, grip the barbell slightly wider than shoulder-width, lower the bar to your lower chest, then press it back up to full arm extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=_QJtBdz1y5Q"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Dumbbell Flyes",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                Description = "Lie on a flat bench with a dumbbell in each hand, arms extended above your chest, lower the dumbbells out to the sides in a wide arc, then bring them back up to meet above your chest",
+                YoutubeUrl = "https://www.youtube.com/watch?v=7rAPlxUvy5g"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Incline Dumbbell Bench Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                Description = "Lie on an incline bench with a dumbbell in each hand, arms extended above your chest, lower the dumbbells to your upper chest, then press them back up to full arm extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=JJPmiiFkQRU"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Close Grip Bench Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                Description = "Lie on a flat bench and grip the barbell with hands closer than shoulder-width apart, lower the bar to your chest, then press it back up to full arm extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=swA18JhsBwM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Tricep Dips on Bench",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                Description = "Sit on the edge of a bench with your hands gripping the edge, slide your butt off the bench and lower yourself until your arms are at 90-degree angles, then push yourself back up to full arm extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=viEwU21-9eE"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Tricep Kickbacks",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Kneel on the bench with a dumbbell in each hand, lean forward and extend your arms behind you, then flex your elbows to bring the weights back to your sides",
+                YoutubeUrl = "https://www.youtube.com/watch?v=HsxX_HQRcl8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Tricep Dumbbell Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                Description = "Lie on a flat bench with a dumbbell in each hand, arms extended above your chest, lower the dumbbells towards your shoulders, then press them back up to full arm extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=ALDsyH7XQzk"
             });
 
             _context.Exercises.Add(new Exercise()
@@ -1424,55 +3006,340 @@ public class ApplicationDbContextInitialiser
                 Name = "Bench Dips",
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Facing away from the bench, place your hands on it and lower your body by bending your elbows, then push back up.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                Description = "Sit on the edge of a bench with your hands gripping the edge, slide your butt off the bench and lower yourself until your arms are at 90-degree angles, then push yourself back up to full arm extension",
+                YoutubeUrl = "https://www.youtube.com/watch?v=0psQvVV3x24"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Incline Push-up",
-                Priority = 2,
+                Name = "Seated Dumbbell Shoulder Press on Bench",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Place your hands on a bench for an elevated push-up, focusing on the lower chest.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the edge of a bench with a dumbbell in each hand, palms facing forward, press the weights overhead until your arms are fully extended, then lower them back down to shoulder level",
+                YoutubeUrl = "https://www.youtube.com/watch?v=4T9UQ4FBVXI"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Decline Push-up",
-                Priority = 3,
+                Name = "Bench Lateral Raises",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "With your feet elevated on a bench and hands on the ground, perform a push-up to target the upper chest.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Bench Press to Neck",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Lie on a bench with a barbell, lowering it slowly towards your neck rather than the chest, then press it up. Be cautious with the weight to avoid injury.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie face-down on a bench with a dumbbell in each hand, arms hanging down towards the ground, raise the weights out to the sides until your arms are parallel to the ground, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=rb2bCkoF5Nc"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Explosive Push-ups",
-                Priority = 5,
+                Name = "Bench Rear Delt Raises",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Using a bench for either hand placement or feet placement, perform a push-up with enough force to lift your body off the ground.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie face-down on a bench with a dumbbell in each hand, arms hanging down towards the ground, raise the weights out to the sides in an arcing motion, focusing on the rear delts, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=nd_7IJ5d7vA"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Seated Arnold Press on Bench",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the edge of a bench with a dumbbell in each hand, palms facing towards you, press the weights overhead while rotating your palms to face forward at the top of the movement, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=kJt00mS03Q8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Shoulder Shrugs",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Traps"),
+                Description = "Sit on the edge of a bench with a dumbbell in each hand, shrug your shoulders up towards your ears, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2I1SI0rInw0"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Crunches",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back on a bench with your knees bent and feet flat on the ground, place your hands behind your head, then crunch your upper body towards your knees, contracting your abs",
+                YoutubeUrl = "https://www.youtube.com/watch?v=MKmrqcoCZ-M"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Leg Raises on Bench",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back on a bench with your legs extended straight up towards the ceiling, lower your legs down towards the ground, then raise them back up to the starting position, engaging your lower abs",
+                YoutubeUrl = "https://www.youtube.com/watch?v=FtDLGdvTShw"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Russian Twists",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Obliques"),
+                Description = "Sit on the edge of a bench with your knees bent and feet flat on the ground, lean back slightly and hold a weight plate or dumbbell with both hands, twist your torso from side to side, engaging your obliques",
+                YoutubeUrl = "https://www.youtube.com/watch?v=9Z5fDLn8E7Y"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench V-ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back on a bench with your arms extended overhead, simultaneously raise your legs and upper body towards each other, forming a V-shape, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=UXp0yBofEb8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Leg Pull-ins",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the edge of a bench with your hands gripping the edge, extend your legs out straight in front of you, then pull your knees towards your chest, crunching your abs",
+                YoutubeUrl = "https://www.youtube.com/watch?v=05RJAdZWT3s"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Step-ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand facing a bench with a dumbbell in each hand, step up onto the bench with one foot, then bring the other foot up to meet it, step back down and repeat with the other leg",
+                YoutubeUrl = "https://www.youtube.com/watch?v=TGc4VR9bO9k"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Bulgarian Split Squats",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand facing away from a bench with a dumbbell in each hand, place one foot on the bench behind you, lower your body down into a lunge position, then push back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Qylrx6_-gp8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Squats",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand in front of a bench with your feet shoulder-width apart, lower your body down into a squat position until your butt touches the bench, then stand back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=As7MwVe4j5k"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Jump Squats",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand in front of a bench with your feet shoulder-width apart, lower your body down into a squat position, then explode upwards into a jump, landing softly back down into the squat position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=_l3ySVKYVJ8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Leg Extensions",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the edge of a bench with your knees bent and feet flat on the ground, extend your legs out straight in front of you, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=TDQiZLMX2iU"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Burpees",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand in front of a bench, lower your body down into a squat position, place your hands on the bench, jump your feet back into a plank position, perform a push-up, then jump your feet back in towards your hands and explode upwards into a jump",
+                YoutubeUrl = "https://www.youtube.com/watch?v=JZQA08SlJnM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Mountain Climbers",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Get into a plank position with your hands on the bench, alternate bringing your knees in towards your chest as if you are climbing a mountain",
+                YoutubeUrl = "https://www.youtube.com/watch?v=nmwgirgXLYM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Plank Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Get into a plank position with your hands on dumbbells or kettlebells on the bench, row one weight up towards your hip while stabilizing with the other arm, then switch sides",
+                YoutubeUrl = "https://www.youtube.com/watch?v=EDxSP5-EL-s"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Tuck Jumps",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand in front of a bench, lower your body down into a squat position, then explode upwards into a jump, bringing your knees up towards your chest",
+                YoutubeUrl = "https://www.youtube.com/watch?v=q-NUSwBgNU4"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Push-up and Row",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Get into a push-up position with your hands on dumbbells or kettlebells on the bench, perform a push-up, then row one weight up towards your hip while stabilizing with the other arm, then switch sides",
+                YoutubeUrl = "https://www.youtube.com/watch?v=3n3w0adNyH8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Pull-Aparts",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a resistance band with both hands in front of you at shoulder-width apart, pull the band apart by bringing your shoulder blades together, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=QS6pHsc5j8Y"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Bent Over Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Step on a resistance band with both feet, hinge at your hips to bend over, grip the band with both hands, then row the band towards your torso, squeezing your shoulder blades together",
+                YoutubeUrl = "https://www.youtube.com/watch?v=X4k73oA-RIM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Lat Pulldowns",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Attach a resistance band to an overhead structure, kneel down or stand with arms extended overhead, pull the band down towards your chest by engaging your lats, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Fzrz8oIxcug"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Face Pulls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Attach a resistance band to a fixed point at chest height, grip the band with both hands, palms facing down, pull the band towards your face, keeping your elbows high and out to the sides",
+                YoutubeUrl = "https://www.youtube.com/watch?v=4CUqA7mRMoU"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Good Mornings",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Step on a resistance band with both feet, position the band across your upper back and shoulders, hinge at your hips to bend forward while keeping your back straight, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=7Ki7FxbIAmc"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Bicep Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with your palms facing upwards, curl the band up towards your shoulders while keeping your elbows close to your sides, then lower back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=op9kVnSso6Q"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Hammer Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with your palms facing each other, curl the band up towards your shoulders while keeping your elbows close to your sides, then lower back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Ap8Btf0CkdU"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Preacher Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on a bench and place one end of a resistance band under your foot, hold the other end with one hand, brace your arm against your inner thigh and curl the band up towards your shoulder, then lower back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Z5OVoFw0g5U"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Concentration Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on a bench and place one end of a resistance band under your foot, hold the other end with one hand, rest your elbow against your inner thigh and curl the band up towards your shoulder, then lower back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=dpHt0ZRvJ8w"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Reverse Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Forearms"),
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with your palms facing downwards, curl the band up towards your shoulders while keeping your elbows close to your sides, then lower back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=CrwAkjsR6Lk"
             });
 
             _context.Exercises.Add(new Exercise()
@@ -1481,1138 +3348,1227 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Band"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Anchor the band behind you and press forward as if performing a bench press.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                SecondaryMuscleGroup = null,
+                Description = "Anchor a resistance band at chest height, hold the ends of the band with your hands, extend your arms forward at chest level, then press the band forward until your arms are fully extended, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=8_eoR1Oe2pA"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Band Chest Fly",
-                Priority = 2,
+                Name = "Band Chest Flyes",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Band"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = null,
+                Description = "Anchor a resistance band at chest height, hold the ends of the band with your hands, extend your arms out to the sides, then bring them together in front of you, squeezing your chest, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=iZJRVbNVxwc"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Chest Pullovers",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = null,
+                Description = "Anchor a resistance band at chest height, hold the ends of the band with your hands, extend your arms overhead, then pull the band down and back behind your head, stretching your chest, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=nF1BZgIcauE"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Chest Squeeze",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = null,
+                Description = "Anchor a resistance band at chest height, hold the ends of the band with your hands, extend your arms forward at chest level, then squeeze your hands together, engaging your chest muscles, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=xUDQcQlqW-U"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Push-ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = null,
+                Description = "Wrap a resistance band around your back and hold the ends in each hand, get into a push-up position with the band providing resistance, lower your body down towards the ground, then push back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=TRnNYvgfgWo"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Tricep Extensions",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Anchor a resistance band overhead, hold one end of the band with both hands, elbows bent and close to your head, extend your arms overhead, straightening them fully, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Uzri84llCTE"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Tricep Pushdowns",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Anchor a resistance band overhead, hold one end of the band with both hands, elbows bent and close to your sides, extend your arms downward, straightening them fully, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=FZxN59k5pYI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Skull Crushers",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Anchor a resistance band overhead, hold one end of the band with both hands, elbows bent and close to your head, lower the band towards your forehead by bending your elbows, then extend your arms back to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=JcIeP2_uzq0"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Tricep Kickbacks",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Anchor a resistance band at waist height, hold one end of the band with one hand, bend forward at the hips, extend your arm back behind you, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=X-xt4iEr7_g"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Close Grip Push-ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                Description = "Wrap a resistance band around your back and hold the ends in each hand, get into a push-up position with your hands close together, lower your body down towards the ground, then push back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=XaO9eEbMi1o"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Shoulder Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Anchor a resistance band at shoulder height, hold one end of the band in each hand, press the band overhead until your arms are fully extended, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=zk_rKmE2_0g"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Lateral Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with your hands by your sides, raise your arms out to the sides until they are parallel to the ground, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=m-jGG2bKZMU"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Front Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with your hands in front of your thighs, raise your arms straight out in front of you until they are parallel to the ground, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=y4sjw_ba45Y"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Face Pulls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Anchor a resistance band at chest height, hold one end of the band in each hand, pull the band towards your face by retracting your shoulder blades, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=4CUqA7mRMoU"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Upright Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Traps"),
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with your hands in front of your thighs, pull the band up towards your chin by raising your elbows out to the sides, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=D8yAwMfcT8k"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Squats",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with your hands by your sides, squat down by bending your knees and pushing your hips back, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=BS7Qa9je3hQ"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Deadlifts",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with your hands in front of your thighs, hinge at your hips to lower your torso towards the ground while keeping your back straight, then return to the starting position by driving through your heels",
+                YoutubeUrl = "https://www.youtube.com/watch?v=cBfNwJI2if8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Lunges",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with one foot, hold the ends of the band with your hands by your sides, step back with your other foot into a lunge position, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=MFoFEZe7Nc8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Glute Bridges",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Glutes"),
+                Description = "Lie on your back with your knees bent and feet flat on the ground, place a resistance band just above your knees, lift your hips up towards the ceiling, squeezing your glutes at the top, then lower back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=czrLz4XoEYc"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Side Leg Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Glutes"),
+                Description = "Attach a resistance band around your ankles, stand with your feet together, then lift one leg out to the side as high as you can, keeping your other leg straight, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Gxx24w9Ghm0"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Crunches",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back with your knees bent and feet flat on the ground, place a resistance band around your thighs, cross your arms over your chest or place your hands behind your head, then crunch up towards your knees, squeezing your abs at the top, then lower back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=v1J5iNUg6JE"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Russian Twists",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the ground with your knees bent and feet elevated, hold the ends of the resistance band with both hands, lean back slightly, then twist your torso from side to side, touching the band to the ground on each side",
+                YoutubeUrl = "https://www.youtube.com/watch?v=ffnuEo9_dZk"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Bicycle Crunches",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back with your knees bent and feet elevated, hold the ends of the resistance band with both hands, bring one knee in towards your chest while straightening the other leg out, then twist your torso to bring the opposite elbow towards the bent knee, switch sides in a pedaling motion",
+                YoutubeUrl = "https://www.youtube.com/watch?v=3k6quvS0HIA"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Plank",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Get into a plank position with the resistance band around your wrists, keeping your body in a straight line from head to heels, engage your core and hold the position for the desired duration",
+                YoutubeUrl = "https://www.youtube.com/watch?v=B8IN2cqno9g"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Leg Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back with your legs straight, loop a resistance band around your feet, raise your legs up towards the ceiling, keeping them straight, then lower them back down without letting them touch the ground",
+                YoutubeUrl = "https://www.youtube.com/watch?v=AtWUbwBgOeI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Push-up with Row",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Wrap a resistance band around your back and hold the ends in each hand, get into a push-up position with your hands on the band, perform a push-up, then at the top of the movement, pull one elbow up towards the ceiling, squeezing your shoulder blade, then lower the arm back down and repeat on the other side",
+                YoutubeUrl = "https://www.youtube.com/watch?v=3C4JZ8f74fM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Deadlift with Shoulder Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with your hands in front of your thighs, perform a deadlift by hinging at your hips and lowering the band towards the ground, then stand up and press the band overhead, extending your arms fully",
+                YoutubeUrl = "https://www.youtube.com/watch?v=UhTVdGNo0wY"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Squat with Overhead Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with your hands at shoulder height, perform a squat by bending your knees and pushing your hips back, then stand up explosively while pressing the band overhead",
+                YoutubeUrl = "https://www.youtube.com/watch?v=WrRqGk4dA3Y"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Renegade Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Wrap a resistance band around your back and hold the ends in each hand, get into a push-up position with your hands on the band, perform a push-up, then at the top of the movement, row one elbow up towards the ceiling, squeezing your shoulder blade, then lower the arm back down and repeat on the other side",
+                YoutubeUrl = "https://www.youtube.com/watch?v=dCvV1Aobpmo"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Burpees",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band in each hand, squat down and place your hands on the ground, kick your feet back into a push-up position, perform a push-up, then jump your feet back towards your hands and stand up explosively while raising the band overhead",
+                YoutubeUrl = "https://www.youtube.com/watch?v=OJf2iPyzmyY"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie face down on a bench with a dumbbell in each hand, let your arms hang down towards the floor, then row the dumbbells up towards your sides, squeezing your shoulder blades together, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=bEd7G0rP-TQ"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Pull-overs",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                Description = "Lie face up on a bench with a dumbbell in both hands, extend your arms overhead, then lower the dumbbell back behind your head while keeping your arms straight, then pull the weight back up over your chest",
+                YoutubeUrl = "https://www.youtube.com/watch?v=pq0gf_WL_54"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench T-Bar Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Place one end of a barbell into a landmine attachment or secure it in a corner, straddle the barbell and hold it with both hands, bend your knees and lean forward, then row the barbell towards your chest, squeezing your shoulder blades together, then lower it back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=BHLO8uU2uGA"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Dumbbell Shrugs",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Traps"),
+                Description = "Sit on the end of a bench with a dumbbell in each hand, let your arms hang down by your sides, then shrug your shoulders up towards your ears, squeezing your traps at the top, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=VkRCBxW9oWM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Face Pulls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
                 SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Anchor the band at chest level and perform a fly movement, bringing your hands together in front of you.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Sit on a bench and hold a resistance band in each hand, anchor the band under your feet, then pull the bands towards your face, retracting your shoulder blades, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=TxP6UpL6k94"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Dumbbell Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the end of a bench with a dumbbell in each hand, let your arms hang down by your sides, then curl the dumbbells up towards your shoulders, squeezing your biceps at the top, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=i7IwwG8mCAc"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Standing Band Press",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                Name = "Bench Hammer Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the end of a bench with a dumbbell in each hand, palms facing towards each other, let your arms hang down by your sides, then curl the dumbbells up towards your shoulders, keeping your palms facing in, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=8AmZlRXLfRg"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Preacher Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on a bench and lean forward, place your upper arms on the bench with your armpits at the edge, hold a barbell with an underhand grip, let your arms hang straight down, then curl the barbell up towards your shoulders, squeezing your biceps at the top, then lower it back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=yV9KJZrWy6U"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Concentration Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the end of a bench with a dumbbell in one hand, place the back of your upper arm against your inner thigh, let your arm hang straight down, then curl the dumbbell up towards your shoulder, squeezing your biceps at the top, then lower it back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=U0lMHCB2If8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Cable Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on a bench in front of a cable machine with a straight bar attachment, hold the bar with an underhand grip, elbows by your sides, curl the bar up towards your shoulders, squeezing your biceps at the top, then lower it back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=KfUaF_XlP9U"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Stand on the band and press upwards, simulating a shoulder press but focusing on using the chest muscles.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                SecondaryMuscleGroup = null,
+                Description = "Lie on a bench with your feet flat on the floor, hold a barbell with an overhand grip, lower the barbell to your chest, then press it back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=rT7DgCr-3pg"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Band Pullovers",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                Name = "Incline Bench Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Lie on your back and use a band to perform the pullover movement, stretching and contracting the chest.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                SecondaryMuscleGroup = null,
+                Description = "Lie on an incline bench with your feet flat on the floor, hold a barbell with an overhand grip, lower the barbell to your upper chest, then press it back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=esQi683XR44"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Single-arm Band Fly",
-                Priority = 5,
+                Name = "Decline Bench Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on a decline bench with your feet secured, hold a barbell with an overhand grip, lower the barbell to your lower chest, then press it back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=U6wfkL8XV6c"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Dumbbell Flyes",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on a bench with a dumbbell in each hand, palms facing each other, extend your arms straight up over your chest, then lower the dumbbells out to the sides in an arc motion, keeping a slight bend in your elbows, until your arms are parallel to the ground, then bring them back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=3NQ_Cbz0dVY"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Cable Crossovers",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand in between two cable machines with the pulleys set to the highest position, hold a handle in each hand, palms facing down, take a step forward, then cross your arms in front of you, keeping a slight bend in your elbows, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=0VN8JGyEojk"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Close Grip Bench Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on a bench with your hands spaced close together on the barbell, lower the barbell to your chest, then press it back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2PJd0QUJ8j8"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Dips",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the edge of a bench with your hands on the edge, fingers facing forward, walk your feet out and lower your body down until your elbows are at 90 degrees, then press yourself back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=9vUhhxEaT6w"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Triceps Extensions",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on a bench with a dumbbell in each hand, extend your arms straight up over your chest, palms facing each other, bend your elbows to lower the dumbbells towards your ears, then extend your arms back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=ZlJM5dLNCdo"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Triceps Dips with Feet Elevated",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the edge of a bench with your hands on the edge, fingers facing forward, place your feet on another bench in front of you, walk your hands forward and lower your body down until your elbows are at 90 degrees, then press yourself back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=6kALZikXxLc"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Skull Crushers",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on a bench with a dumbbell in each hand, extend your arms straight up over your chest, palms facing each other, bend your elbows to lower the dumbbells towards your forehead, then extend your arms back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=-rh3MHnRI_I"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Shoulder Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on a bench with a barbell resting on your upper chest, palms facing forward, press the barbell overhead until your arms are fully extended, then lower it back down to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=CnBmiBqp-AI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Lateral Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the end of a bench with a dumbbell in each hand, palms facing in, let your arms hang down by your sides, then raise the dumbbells out to the sides until they reach shoulder height, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=8hEXS_wqF0c"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Front Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the end of a bench with a dumbbell in each hand, palms facing down, let your arms hang down by your sides, then raise the dumbbells in front of you until they reach shoulder height, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=_opk-VAYCzA"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Rear Delt Flyes",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie face down on a bench with a dumbbell in each hand, palms facing each other, let your arms hang straight down towards the floor, then raise the dumbbells out to the sides until they reach shoulder height, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=KTvxxMS5Gfc"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Arnold Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on a bench with a dumbbell in each hand, palms facing towards you, start with the dumbbells at shoulder height with your palms facing towards you, then press the dumbbells overhead while rotating your palms away from you, then lower them back down while rotating your palms back towards you",
+                YoutubeUrl = "https://www.youtube.com/watch?v=woayi2Q96wQ"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Step-ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand facing a bench, step one foot up onto the bench, then push through your heel to stand up on top of the bench, then step back down with the same foot and repeat on the other side",
+                YoutubeUrl = "https://www.youtube.com/watch?v=6vOhj6pgR7o"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Bulgarian Split Squats",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand facing away from a bench with one foot elevated behind you, lower your body down into a lunge position, keeping your front knee behind your toes, then push through your front heel to return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2C-uNgKwPLE"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Burpee Box Jumps",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Start in a standing position in front of a bench, perform a burpee by squatting down, kicking your feet back into a plank position, then jumping your feet back in towards your hands, explosively jump up onto the bench, then step or jump back down and repeat",
+                YoutubeUrl = "https://www.youtube.com/watch?v=kJvkiIzndHU"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Reverse Lunges",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand facing away from a bench, step one foot back onto the bench, then lower your body down into a lunge position, keeping your front knee behind your toes, then push through your front heel to return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=aVWCW7kiy10"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Plank Jacks",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Get into a plank position with your hands on the bench, engage your core and jump both feet out wide to the sides, then jump them back together, continue alternating between jumping out and in",
+                YoutubeUrl = "https://www.youtube.com/watch?v=24l_2S_bZJM"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Pull-aparts",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Hold a resistance band with both hands in front of you, palms facing down and hands shoulder-width apart, pull the band apart and towards your chest, squeezing your shoulder blades together, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=syQ5RYvOuRk"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Lat Pulldowns",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Attach a resistance band to an overhead anchor, kneel down and hold the ends of the band with both hands, arms extended overhead, pull the band down towards your chest, squeezing your shoulder blades together, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=syQ5RYvOuRk"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Face Pulls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Attach a resistance band to an overhead anchor, hold the ends of the band with both hands, palms facing in, pull the band towards your face, retracting your shoulder blades, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=hyv14e2QDq0"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Bent-over Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with both hands, hinge at the hips and bend your knees slightly, then row the band towards your lower ribs, squeezing your shoulder blades together, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2_Fh5XS7H3U"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Deadlifts",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with both hands in front of your thighs, hinge at the hips and push your hips back, keeping your back flat, then stand up tall, squeezing your glutes at the top, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Z1wzP0nXD3E"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Bicep Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with both hands, palms facing up, curl the band up towards your shoulders, squeezing your biceps at the top, then lower it back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=VPhYipmU2nY"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Hammer Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with both hands, palms facing each other, curl the band up towards your shoulders, keeping your palms facing in, then lower it back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=rkJrTB_Xjx4"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Preacher Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on a bench and place one end of a resistance band under your foot, hold the other end with one hand, rest your elbow on your thigh with your arm extended, curl the band up towards your shoulder, then lower it back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=bFJx7aWz7TA"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Concentration Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on a bench and place one end of a resistance band under your foot, hold the other end with one hand, rest your elbow on your thigh with your arm extended, curl the band up towards your shoulder, then lower it back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=LjBDB2Kmxv4"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Reverse Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with both hands, palms facing down, curl the band up towards your shoulders, keeping your palms facing down, then lower it back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=iRtVRbBLufw"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Chest Press",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Band"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
                 SecondaryMuscleGroup = null,
-                Description = "Anchor the band at chest level and perform a single-arm fly, isolating one side of the chest at a time.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Attach a resistance band to an anchor point behind you, hold the ends of the band with both hands, palms facing forward, press the band straight out in front of you until your arms are fully extended, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=7q30zrNCoG0"
             });
-
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Plate Press",
+                Name = "Band Chest Flyes",
                 Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Lie on your back and press a weight plate up from your chest until your arms are straight, similar to a bench press.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                SecondaryMuscleGroup = null,
+                Description = "Attach a resistance band to an anchor point behind you, hold the ends of the band with both hands, palms facing in, extend your arms straight out to the sides, then bring them together in front of you, squeezing your chest at the top, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=KpvDjxGTzOI"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Plate Squeeze Press",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                Name = "Band Push-ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Hold two plates together at chest level and press them together as hard as you can while pressing them upwards.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                SecondaryMuscleGroup = null,
+                Description = "Loop a resistance band around your back and hold the ends in each hand, get into a push-up position with your hands on the floor, perform a push-up while maintaining tension on the band, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Q9JkN8evgSw"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Lying Plate Pullover",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                Name = "Band Chest Press with Twist",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Lie on the ground or a bench, hold a plate with both hands and extend your arms behind your head then bring it back over your chest.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                SecondaryMuscleGroup = null,
+                Description = "Attach a resistance band to an anchor point behind you, hold the ends of the band with both hands, palms facing forward, press the band straight out in front of you until your arms are fully extended, then twist your torso to one side, then return to the starting position and repeat on the other side",
+                YoutubeUrl = "https://www.youtube.com/watch?v=OK8HsHjpGZg"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Standing Plate Chest Press",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                Name = "Band Chest Pullover",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Stand and hold a weight plate at chest level. Press the plate straight out in front of you, then bring it back.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                SecondaryMuscleGroup = null,
+                Description = "Attach a resistance band to an anchor point behind you, hold one end of the band with both hands, palms facing up, extend your arms straight out in front of you, then pull the band down towards your thighs, keeping your arms straight, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=OMoGnZagkRo"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Plate Around The World",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Hold a plate in front of your thighs and circle it up and around your head in a continuous motion to target the chest from all angles.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Name = "Band Shoulder Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with both hands, palms facing up, press the band straight up overhead until your arms are fully extended, then lower it back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=XLJ1TnFyf8A"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Lateral Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with both hands, palms facing in, raise the band out to the sides until your arms are parallel to the ground, then lower it back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=8hEXS_wqF0c"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Front Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with both hands, palms facing down, raise the band in front of you until your arms are parallel to the ground, then lower it back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=hVY-57RA84o"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Rear Delt Flyes",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Attach a resistance band to an anchor point in front of you, hold the ends of the band with both hands, palms facing each other, pull the band out to the sides until your arms are parallel to the ground, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=pGFB0VziVuw"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Shoulder Shrugs",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with both hands, palms facing in, shrug your shoulders up towards your ears, then lower them back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=JvC2u6rjdQg"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Squats",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with both hands, palms facing in, squat down by bending your knees and pushing your hips back, then stand back up, squeezing your glutes at the top",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2oSBaXaFZlQ"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Lunges",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Step onto a resistance band with one foot and hold the ends of the band in each hand, step back with the other foot into a lunge position, keeping your front knee behind your toes, then push through your front heel to return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=CS5h5X59xgE"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Leg Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Attach a resistance band to an anchor point behind you, hold the ends of the band with both hands, palms facing forward, press your feet against the band as you extend your legs straight out in front of you, then return to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=-hWLQvRYJQs"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Deadlifts",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with both hands in front of your thighs, hinge at the hips and push your hips back, keeping your back flat, then stand up tall, squeezing your glutes at the top",
+                YoutubeUrl = "https://www.youtube.com/watch?v=XeruCyC7wP0"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Glute Bridges",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back with your knees bent and feet flat on the floor, place a resistance band just above your knees, press your feet into the floor and lift your hips up towards the ceiling, squeezing your glutes at the top, then lower back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=dv9R4nJjc8w"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Crunches",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back with your knees bent and feet flat on the floor, place a resistance band around your mid-back and hold the ends with both hands, cross your arms over your chest, then crunch up towards your knees, squeezing your abs at the top, then lower back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=8BBQE9dTxw0"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Russian Twists",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the floor with your knees bent and feet elevated, hold the ends of a resistance band with both hands, twist your torso to one side, then twist to the other side, keeping your core engaged throughout",
+                YoutubeUrl = "https://www.youtube.com/watch?v=_zR6ROjoOX0"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Bicycle Crunches",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back with your knees bent and feet flat on the floor, place a resistance band around your mid-back and hold the ends with both hands, bring one knee towards your chest while straightening the other leg, simultaneously twist your torso to bring your opposite elbow towards your knee, then switch sides",
+                YoutubeUrl = "https://www.youtube.com/watch?v=7UaRkxOT3v0"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Plank",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Get into a plank position with your hands on the floor and a resistance band looped around your wrists, engage your core and hold the position, keeping your body in a straight line from head to heels",
+                YoutubeUrl = "https://www.youtube.com/watch?v=zc9jMj6PCEg"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Leg Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on your back with your legs straight and a resistance band looped around your feet, lift your legs towards the ceiling, then lower them back down towards the floor, keeping your core engaged throughout",
+                YoutubeUrl = "https://www.youtube.com/watch?v=hQ9UBpQyQrI"
             });
 
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Push-up",
+                Name = "Band Squat to Shoulder Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with both hands, palms facing in, perform a squat by bending your knees and pushing your hips back, then as you stand up, press the band straight up overhead until your arms are fully extended",
+                YoutubeUrl = "https://www.youtube.com/watch?v=l0jCh9YYD2A"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Deadlift to Row",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with both hands, palms facing in, hinge at the hips and push your hips back, keeping your back flat, then stand up tall and pull the band towards your lower ribs, squeezing your shoulder blades together",
+                YoutubeUrl = "https://www.youtube.com/watch?v=kZ-u7My4zvY"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Woodchoppers",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Attach a resistance band to an anchor point above your head, hold the ends of the band with both hands, stand with your feet shoulder-width apart and arms extended overhead, then pull the band diagonally across your body, pivoting on your back foot and twisting your torso",
+                YoutubeUrl = "https://www.youtube.com/watch?v=RVWZ1yC7kVk"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Standing Oblique Crunches",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand on a resistance band with both feet, hold the ends of the band with both hands, palms facing in, extend your arms overhead, then crunch your torso to one side, bringing your elbow towards your hip, then return to the starting position and repeat on the other side",
+                YoutubeUrl = "https://www.youtube.com/watch?v=DRhW-EQCHjE"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Band Bear Crawls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
+                SecondaryMuscleGroup = null,
+                Description = "Place a resistance band around your wrists and get into a bear crawl position with your knees hovering above the ground, walk forward by moving your opposite hand and foot at the same time, keeping tension on the band",
+                YoutubeUrl = "https://www.youtube.com/watch?v=pI-5R4-mo-g"
+            });
+
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Pull-ups",
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Standard push-ups engage the chest, shoulders, and triceps, with hands shoulder-width apart.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Hang from a pull-up bar with your hands slightly wider than shoulder-width apart, pull yourself up until your chin clears the bar, then lower yourself back down with control",
+                YoutubeUrl = "https://www.youtube.com/watch?v=eGo4IYlbE5g"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Wide Grip Push-up",
-                Priority = 2,
+                Name = "Chin-ups",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Perform push-ups with your hands set wider than shoulder-width to target the outer chest more effectively.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Hang from a pull-up bar with your palms facing towards you and hands shoulder-width apart, pull yourself up until your chin clears the bar, then lower yourself back down with control",
+                YoutubeUrl = "https://www.youtube.com/watch?v=zJMQHBGgO8I"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Diamond Push-up",
-                Priority = 3,
+                Name = "Inverted Rows",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Perform push-ups with your hands close together under your chest, forming a diamond shape with your thumbs and index fingers, to focus on the inner chest and triceps.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Set up a bar at hip height, lie underneath it and grab it with an overhand grip, hang from the bar with your body straight and heels on the ground, pull your chest up to the bar, then lower yourself back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=ebWEh1OAy0s"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Decline Push-up",
-                Priority = 4,
+                Name = "Bodyweight Rows",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Elevate your feet on a bench or step and perform push-ups to increase the intensity on the upper chest and shoulders.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Set up a bar at waist height, grab it with an overhand grip, lean back with your body straight and heels on the ground, pull your chest up to the bar, then lower yourself back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=cA5DzXtxtkw"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Incline Push-up",
-                Priority = 5,
+                Name = "Superman",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Place your hands on an elevated surface such as a bench or step and perform push-ups to target the lower chest.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Decline Push-up",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Elevate your feet on a bench or step and perform push-ups to increase the intensity on the upper chest and shoulders.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Incline Push-up",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Place your hands on an elevated surface such as a bench or step and perform push-ups to target the lower chest.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Floor Press",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Lie on the floor and press kettlebells upwards, similar to a bench press but with a limited range of motion.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Seated Kettlebell Press",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Sit upright on the floor or a bench and press kettlebells above your head, focusing on engaging the chest.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Chest Fly",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Lie on a bench and perform a fly movement with kettlebells, extending your arms wide and then bringing them together above your chest.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Pullover on Floor",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Lie on the floor holding a kettlebell with both hands above your chest, extend your arms behind your head, then bring the kettlebell back to the starting position.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Squeeze Press",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Lie on a bench and press two kettlebells up while squeezing them together as hard as you can throughout the entire movement.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Floor Press",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Lie on the floor and press kettlebells upwards, similar to a bench press but with a limited range of motion.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Seated Kettlebell Press",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Sit upright on the floor or a bench and press kettlebells above your head, focusing on engaging the chest.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Chest Fly",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                Description = "Lie on a bench and perform a fly movement with kettlebells, extending your arms wide and then bringing them together above your chest.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Pullover on Floor",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Lie on the floor holding a kettlebell with both hands above your chest, extend your arms behind your head, then bring the kettlebell back to the starting position.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Squeeze Press",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                Description = "Lie on a bench and press two kettlebells up while squeezing them together as hard as you can throughout the entire movement.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Isometric Chest Holds",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
                 SecondaryMuscleGroup = null,
-                Description = "Grip the pull-up bar with an overhand grip and pull yourself halfway up. Hold this position to engage your chest muscles.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Pull-over with Leg Raise",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                Description = "Hang from the bar, perform a pull-over by lifting your body up and over the bar while simultaneously raising your legs straight in front of you.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Clap Pull-ups",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Perform an explosive pull-up and at the top of the movement, release the bar, clap your hands, and then grab the bar again.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Archer Pull-ups",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Perform a pull-up but with one arm extended to the side like an archer, alternating the working arm with each rep.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Typewriter Pull-ups",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Pull yourself up and move laterally across the bar, mimicking the action of a typewriter carriage.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Bicep Curl",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Hold the kettlebell with both hands and perform a curl by bringing it towards your chest, then lowering it back down.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Single-Arm Kettlebell Curl",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Hold a kettlebell in one hand with a neutral grip and curl it towards your shoulder. Repeat on both sides.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Hammer Curl",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Perform a curl with the kettlebell by holding the handle and keeping your thumb facing upwards, mimicking a hammer grip.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Concentration Curl",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Sit down with your elbow on your thigh and curl the kettlebell towards your shoulder, focusing on isolating the bicep.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Alternating Kettlebell Curl",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand with a kettlebell in each hand and alternate curling each one towards your shoulder.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Lie face down on the ground with your arms extended overhead and legs straight, lift your chest, arms, and legs off the ground simultaneously, squeezing your back muscles at the top, then lower back down",
+                YoutubeUrl = "https://www.youtube.com/watch?v=cc8of2IO4x0"
             });
 
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Kettlebell Bicep Curl",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Hold the kettlebell with both hands and perform a curl by bringing it towards your chest, then lowering it back down.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Single-Arm Kettlebell Curl",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Hold a kettlebell in one hand with a neutral grip and curl it towards your shoulder. Repeat on both sides.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Hammer Curl",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Perform a curl with the kettlebell by holding the handle and keeping your thumb facing upwards, mimicking a hammer grip.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Concentration Curl",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Sit down with your elbow on your thigh and curl the kettlebell towards your shoulder, focusing on isolating the bicep.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Alternating Kettlebell Curl",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand with a kettlebell in each hand and alternate curling each one towards your shoulder.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Dumbbell Bicep Curl",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand or sit with a dumbbell in each hand, palms facing forward, and curl the weights while keeping your elbows close to your torso.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Incline Dumbbell Curl",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie back on an incline bench with a dumbbell in each hand and curl the weights towards your shoulders.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Hammer Curl",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Hold dumbbells at your side with palms facing your torso and curl the weights up while keeping your thumbs pointing up.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Preacher Curl",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Sit at a preacher bench with a dumbbell in hand, palm facing up. Curl the dumbbell towards your shoulder, focusing on isolating the bicep.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Concentration Curl",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Sit on a bench with a dumbbell in one hand, and brace your elbow against your thigh. Curl the dumbbell towards your shoulder, isolating the bicep.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Barbell Curl",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand with feet shoulder-width apart, grip the barbell with hands shoulder-width apart, and curl the bar towards your chest.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "EZ Bar Preacher Curl",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Use an EZ curl bar and perform curls on a preacher bench to isolate the biceps effectively.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Standing Barbell Reverse Curl",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Hold a barbell with an overhand grip and curl it towards your chest, engaging both the biceps and the forearms.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Close-Grip Barbell Curl",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Perform a barbell curl with your hands placed closer than shoulder-width apart to target the inner biceps.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Barbell Drag Curl",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Curl the barbell by dragging it up your body as close as possible, which helps to engage the biceps more intensely.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Chin-Ups",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Grip the pull-up bar with palms facing towards you and pull yourself up until your chin is over the bar.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Negative Chin-Ups",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Start at the top of the chin-up position and slowly lower yourself down with control to emphasize the eccentric phase.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Mixed Grip Pull-up",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Grip the bar with one hand facing towards you and the other facing away. Alternate grips between sets.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Commando Pull-ups",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Grip the bar with both hands next to each other, one facing forward and one back. Pull yourself up, alternating sides.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Close-Grip Chin-Ups",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Perform chin-ups with your hands placed close together to increase the focus on the biceps.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Standing Band Bicep Curl",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand on a resistance band and curl your hands towards your shoulders.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Seated Band Bicep Curl",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Sit on a chair and anchor the band under your feet. Curl your hands towards your shoulders.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Band Hammer Curl",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand on the band and perform curls with palms facing each other, mimicking the hammer curl motion.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Band Preacher Curl",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Secure the band under your feet and lean forward slightly. Curl the band towards you, mimicking the motion of a preacher curl.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Band Concentration Curl",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Sit down, anchor the band under your foot, and perform curls focusing on isolating the biceps, similar to a dumbbell concentration curl.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Plate Curl",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Hold a weight plate at its edge with both hands and perform curls, bringing it towards your chest.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Standing Plate Hammer Curl",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Grip the plate from its sides and perform a curl with your thumbs pointing upwards, mimicking a hammer curl.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Single-Arm Plate Curl",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Hold a plate in one hand at the side and perform curls, isolating one arm at a time.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Plate Preacher Curl",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Using a preacher bench, rest your arm and perform curls with a plate, focusing on isolating the bicep.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Plate Zottman Curl",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Perform a curl with a plate, but at the top of the movement, rotate your grip so your palm faces down before lowering, then rotate back at the bottom.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Bodyweight Bicep Curl",
+                Name = "Chin-ups",
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
                 SecondaryMuscleGroup = null,
-                Description = "Use a sturdy table or a bar at hip height. Grab the edge/bar with palms facing up, lean back, and curl your body up towards your hands.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Hang from a pull-up bar with your palms facing towards you and hands shoulder-width apart, pull yourself up until your chin clears the bar, then lower yourself back down with control",
+                YoutubeUrl = "https://www.youtube.com/watch?v=zJMQHBGgO8I"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Chin-Ups",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Hang from a pull-up bar with palms facing towards you and pull yourself up until your chin is over the bar.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Commando Chin-ups",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Hang from a pull-up bar with one hand in front of the other, facing you. Pull up, alternating the side of your head that clears the bar.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Isometric Chin-up Hold",
-                Priority = 4,
+                Name = "Close-grip Pull-ups",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
                 SecondaryMuscleGroup = null,
-                Description = "Pull yourself up in a chin-up position and hold at the top for as long as possible to engage the biceps.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Hang from a pull-up bar with your hands closer together than shoulder-width apart, palms facing towards you, pull yourself up until your chin clears the bar, then lower yourself back down with control",
+                YoutubeUrl = "https://www.youtube.com/watch?v=4eSOvVBHr-U"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Towel Bicep Curl",
-                Priority = 5,
+                Name = "Bodyweight Bicep Curls",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
                 SecondaryMuscleGroup = null,
-                Description = "Wrap a towel around a sturdy bar, hold the ends, lean back, and perform curls by pulling yourself towards the bar.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Stand with your feet shoulder-width apart and arms extended by your sides, palms facing up, curl your hands towards your shoulders, squeezing your biceps at the top, then lower them back down with control",
+                YoutubeUrl = "https://www.youtube.com/watch?v=6kALZikXxLc"
             });
-
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Kettlebell Overhead Triceps Extension",
+                Name = "Bicep Dips",
                 Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
                 SecondaryMuscleGroup = null,
-                Description = "Hold the kettlebell by the handle with both hands behind your head, extend your arms to lift the kettlebell overhead.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Set up two parallel bars at hip height, grip the bars with your palms facing towards each other, lower yourself down by bending your elbows, then push yourself back up to the starting position, keeping tension on your biceps",
+                YoutubeUrl = "https://www.youtube.com/watch?v=8L7KJjdLVw8"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Kettlebell Skull Crusher",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie on a bench, hold a kettlebell with both hands, and perform a triceps extension by lowering it towards your forehead and then extending your arms.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Single-Arm Kettlebell Floor Press",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie on the floor, hold a kettlebell in one hand with your arm fully extended. Lower the kettlebell by bending your elbow, then press it back up.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Tricep Kickback",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Bend forward slightly, hold a kettlebell in one hand, keep your elbow close to your body, and extend your arm back.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Close-Grip Floor Press",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie on the floor and press two kettlebells up with your hands close together, focusing on the triceps.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Dumbbell Overhead Triceps Extension",
+                Name = "Negative Chin-ups",
                 Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
                 SecondaryMuscleGroup = null,
-                Description = "Hold a dumbbell with both hands and extend your arms overhead. Bend your elbows to lower the dumbbell behind your head, then extend your arms.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Jump up to the top of a pull-up position so your chin is over the bar, then lower yourself down as slowly as possible, focusing on the negative portion of the movement",
+                YoutubeUrl = "https://www.youtube.com/watch?v=gqVCIcGrZrc"
             });
+
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Dumbbell Kickback",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "With one knee and hand on a bench, hold a dumbbell in the other hand, keep your upper arm stationary, and extend your arm to kick back.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Dumbbell Skull Crusher",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie on a bench with dumbbells in each hand. Extend your arms above " +
-                              "you and bend your elbows to lower the dumbbells towards your forehead.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Dumbbell Tricep Press",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie on a bench and hold a dumbbell with both hands above your chest. Keep your elbows in and lower the dumbbell towards your chest by bending your elbows, then press it back up.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Incline Dumbbell Skull Crusher",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie on an incline bench with a dumbbell in each hand. Extend your arms and then bend your elbows to lower the dumbbells towards your temples before extending back.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Barbell Skull Crusher",
+                Name = "Push-ups",
                 Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
                 SecondaryMuscleGroup = null,
-                Description = "Lie on a bench and hold a barbell above your chest. Bend at your elbows to lower the bar towards your forehead, then extend your arms to return to the starting position.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Start in a plank position with your hands shoulder-width apart, lower your body until your chest almost touches the ground, then push yourself back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=IODxDxX7oi4"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Close-Grip Barbell Bench Press",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie on a bench and grip the barbell with hands closer than shoulder-width. Lower the bar to your chest, then press it back up, focusing on using your triceps.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Barbell Overhead Triceps Extension",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand or sit with a barbell held overhead. Bend your elbows to lower the bar behind your head, then extend your arms to lift the bar back up.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Barbell Tricep Press",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie on a bench and hold a barbell with a narrow grip. Start with the bar directly above you, lower it towards your chest by bending your elbows, then press it back up.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Reverse Grip Barbell Bench Press",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie on a bench and grip the barbell with an underhand grip. Press the bar up and down while keeping your wrists straight and focusing on engaging your triceps.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Bodyweight Triceps Extension",
+                Name = "Wide-grip Push-ups",
                 Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
                 SecondaryMuscleGroup = null,
-                Description = "Use a low bar or rings. Keep your body straight and lean forward, placing your hands on the bar. Bend at your elbows to lower your forehead towards the bar, then push back up.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Start in a plank position with your hands wider than shoulder-width apart, lower your body until your chest almost touches the ground, then push yourself back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=_83TzKk_2Mg"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Triceps Dips on Parallel Bars",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Grip the parallel bars, lift yourself up, then lower your body by bending your elbows until they're at about 90 degrees, push back up.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Pull-up Bar Triceps Press",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand beneath a pull-up bar, reach up and place your hands on the bar with a narrow grip, and press down as if performing a triceps dip.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Reverse Grip Pull-up",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                Description = "Perform a pull-up with an underhand grip, focusing on using your triceps to lift your body.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Isometric Hold Triceps Extension",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Use a low bar or rings to hold yourself in the bottom position of a triceps extension, keeping your body straight and elbows bent, hold as long as possible.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Band Triceps Pushdown",
+                Name = "Diamond Push-ups",
                 Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
                 SecondaryMuscleGroup = null,
-                Description = "Anchor a band above you and perform triceps pushdowns, keeping your elbows pinned to your sides.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Start in a plank position with your hands close together, forming a diamond shape with your index fingers and thumbs, lower your body until your chest almost touches your hands, then push yourself back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=J9b8NmIc0z8"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Band Overhead Triceps Extension",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Anchor the band beneath your feet, grasp it with both hands behind your neck, and extend your arms overhead.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Band Triceps Kickback",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Step on the band with one foot, lean forward, hold the band with one hand, and perform a kickback motion.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Single-Arm Band Triceps Extension",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Anchor the band at a high point, grasp the end with one hand, and perform triceps extensions, isolating one arm at a time.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Band Lying Triceps Extension",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie on your back, anchor the band under your feet, and perform triceps extensions overhead, mimicking skull crushers.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Plate Overhead Triceps Extension",
+                Name = "Decline Push-ups",
                 Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
                 SecondaryMuscleGroup = null,
-                Description = "Hold a weight plate with both hands overhead. Bend your elbows to lower the plate behind your head, then extend your arms to lift the plate back up.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Place your feet on an elevated surface, such as a bench or step, and assume a plank position with your hands on the ground, lower your body until your chest almost touches the ground, then push yourself back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=TU8QYVW0gDU"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Plate Triceps Press",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
+                Name = "Plyometric Push-ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
                 SecondaryMuscleGroup = null,
-                Description = "Lie on your back and hold a weight plate over your chest with both hands. Press the plate straight up until your arms are fully extended, then lower back down.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Perform a regular push-up, but explosively push yourself up so your hands leave the ground, clap your hands together, then land softly and immediately go into the next repetition",
+                YoutubeUrl = "https://www.youtube.com/watch?v=45cFHORjWJ0"
             });
+
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Plate Kickback",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
+                Name = "Tricep Dips",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
                 SecondaryMuscleGroup = null,
-                Description = "Bend forward at the waist, hold a weight plate in one hand, and perform a kickback motion by extending your arm behind you.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Set up two parallel bars at hip height, grip the bars with your palms facing towards each other, lower yourself down by bending your elbows, then push yourself back up to the starting position, keeping tension on your triceps",
+                YoutubeUrl = "https://www.youtube.com/watch?v=8L7KJjdLVw8"
             });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Standing Plate Triceps Extension",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand with your feet shoulder-width apart, hold a weight plate with both hands behind your head, and extend your arms to press the plate overhead.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Plate Behind-the-Back Lift",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Hold a weight plate with both hands behind your back at waist level. Lift the plate up by extending your arms and flexing your triceps, then lower it back down.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
 
             _context.Exercises.Add(new Exercise()
             {
@@ -2621,563 +4577,319 @@ public class ApplicationDbContextInitialiser
                 Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
                 SecondaryMuscleGroup = null,
-                Description = "Get into a push-up position but with your hands close together under your chest, forming a diamond shape with your fingers to target the triceps.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Start in a plank position with your hands close together, forming a diamond shape with your index fingers and thumbs, lower your body until your chest almost touches your hands, then push yourself back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=J9b8NmIc0z8"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Bench Dips",
-                Priority = 2,
+                Name = "Tricep Bench Dips",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
                 SecondaryMuscleGroup = null,
-                Description = "Place your hands on a bench or chair behind you, extend your legs forward, and lower your body by bending your elbows before pushing back up.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Sit on the edge of a bench with your hands gripping the edge beside your hips, slide your butt off the bench and lower yourself down by bending your elbows, then push yourself back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=_2wzczWYgTI"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Close-Grip Push-ups",
-                Priority = 3,
+                Name = "Tricep Push-ups",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
                 SecondaryMuscleGroup = null,
-                Description = "Perform a push-up with your hands placed closer than shoulder-width apart to increase the focus on the triceps.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Start in a plank position with your hands close together and elbows tight to your sides, lower your body until your chest almost touches the ground, then push yourself back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=yKWYEw_k06I"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Triceps Plank Extensions",
-                Priority = 4,
+                Name = "Close-grip Push-ups",
+                Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
                 SecondaryMuscleGroup = null,
-                Description = "Start in a plank position with your forearms on the ground. Push up off your forearms, extending your arms to engage your triceps, then lower back into the plank.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Triceps Body Press",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Triceps"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand facing away from a wall, place your hands on the ground, and walk your feet up the wall. Bend your elbows to lower your head towards the ground, then push back up.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Russian Twist",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Sit on the floor with your knees bent, holding a kettlebell with both hands. Lean back slightly and twist your torso to move the kettlebell from one side of your body to the other.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Windmill",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand with your feet shoulder-width apart, holding a kettlebell overhead with one arm. Bend at the waist and lower your free hand towards the opposite foot, then return to the starting position.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Plank Drag",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Start in a plank position with a kettlebell outside one arm. Reach under your torso with the opposite arm to drag the kettlebell to the other side, and repeat.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Sit-up",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie on your back with your knees bent, holding a kettlebell on your chest. Perform a sit-up, keeping the kettlebell close to your chest.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Hanging Leg Raise",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Hang from a pull-up bar holding a kettlebell with your feet, raise your legs to parallel to the ground, then lower them back down.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Start in a plank position with your hands closer together than shoulder-width apart, lower your body until your chest almost touches the ground, then push yourself back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=4eSOvVBHr-U"
             });
 
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Dumbbell Side Bend",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand with feet hip-width apart, holding a dumbbell in one hand. Bend to the side with the dumbbell, then return to the upright position. Repeat on both sides.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Dumbbell Wood Chop",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand with your feet wider than hip-width apart, holding a dumbbell with both hands. Twist your torso, and swing the dumbbell diagonally across the body like chopping wood.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Dumbbell Plank Pull-through",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Start in a high plank position with a dumbbell on the floor next to your outside hand. Reach under your torso with the opposite hand to grab the dumbbell and drag it to the other side. Repeat the pull-through while maintaining plank position.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Weighted Russian Twist",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Sit on the floor with knees bent, holding a dumbbell with both hands. Lean back slightly and lift your feet off the floor. Rotate your torso to move the dumbbell from one side of your body to the other.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Dumbbell Dead Bug",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie on your back with arms extended holding a dumbbell above your chest. Lift your legs so your knees are above your hips. Slowly lower opposite arm and leg towards the floor, then return to the start position and repeat with the other arm and leg.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Barbell Rollout",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Kneel on the floor with a barbell in front of you. Grip the barbell with both hands, roll the barbell forward, extending your body as straight as possible, then pull back to the starting position.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Landmine 180s",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Secure one end of a barbell in a corner (or landmine station), lift the other end with both hands. Twist your torso to swing the barbell end from one side to the other in a semicircular motion.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Barbell Side Bend",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand up straight holding a barbell on your shoulders. Bend at the waist to one side as far as possible, then stand straight again. Repeat on the other side.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Barbell Ab Rollout (Standing)",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand with your feet shoulder-width apart and a barbell in front of you. Lean forward and roll the barbell away from you until your body is extended, then roll it back towards your feet.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Overhead Barbell Oblique Crunch",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand with your feet shoulder-width apart, holding a barbell overhead. Keep your arms straight and bend at the waist to one side, then return to the center before bending to the other side.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Hanging Leg Raise",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Hang from a pull-up bar with your legs straight down. Raise your legs to form an L-shape with your body, then lower them back down.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Hanging Knee Raise Twist",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Hang from a pull-up bar and raise your knees towards your chest. " +
-                              "Twist your torso as you lift your knees to work the ",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Toes to Bar",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Hang from a bar and with straight legs, raise your toes up to touch the bar, then lower back down in a controlled manner.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Windshield Wipers",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Hang from a bar, raise your legs to 90 degrees, then rotate your legs from side to side like windshield wipers.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Hanging Scissor Kicks",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Hang from a pull-up bar and perform a scissor motion with your legs, alternating each leg up and down.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Band Kneeling Crunch",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Kneel on the floor with the band anchored above you. Hold the ends of the band, crunch your abdomen, bringing your hands towards the floor.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Band Woodchoppers",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Anchor the band at a high point, stand sideways to the anchor, and hold the band with both hands. Rotate your torso and pull the band down across your body to your opposite knee.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Band PallofPress",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Anchor the band at chest height, stand perpendicular to the anchor point holding the band with both hands close to your chest. Extend your arms straight out in front of your chest, then bring them back in. Keep your torso steady and resist the pull of the band.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Band Twist",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Anchor the band at waist height, stand with your side to the anchor and hold the band with both hands. Rotate your torso away from the anchor point, stretching the band as you twist. Return to the starting position.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Band Standing Abdominal Rollout",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Band"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand with your feet hip-width apart, anchor the band under your feet, and hold it with both hands in front of you. Lean forward, rolling your hands out away from your body, then pull back to stand straight.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Plate Crunch",
-                Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie on your back with knees bent and feet flat on the floor. Hold a weight plate on your chest and crunch up, lifting your shoulders off the floor.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Plate Russian Twist",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Sit on the floor with knees bent, lean back slightly. Hold a weight plate with both hands and twist your torso to move the plate from one side of your body to the other.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Standing Plate Twist",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand with feet hip-width apart, holding a weight plate at chest level. Twist your torso, moving the plate to the left and then to the right.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Plate Overhead Sit-up",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie on your back, legs straight, and hold a weight plate above your head. Perform a sit-up, keeping the plate overhead throughout the movement.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Plate Toe Touch",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie on your back with legs straight up. Hold a weight plate with both hands and crunch up, trying to touch your toes with the plate.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Plank",
+                Name = "Handstand Push-ups",
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
                 SecondaryMuscleGroup = null,
-                Description = "Get into a push-up position but rest on your forearms. Keep your body straight and hold this position to engage your core.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Start in a handstand position against a wall, lower your body until your head almost touches the ground, then push yourself back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=ABbVqVubrDE"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Mountain Climbers",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Start in a high plank position. Drive your knees towards your chest one at a time, like running in place.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Leg Raises",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie on your back, legs straight, and lift your legs to 90 degrees without bending your knees. Lower them back down without touching the floor.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Bicycle Crunches",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie on your back with your hands behind your head and legs raised and bent at 90 degrees. Alternate sides by bringing your right elbow towards your left knee and then your left elbow towards your right knee, mimicking a cycling motion.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Bicycle Crunches",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie on your back with your hands behind your head and legs raised and bent at 90 degrees. Alternate sides by bringing your right elbow towards your left knee and then your left elbow towards your right knee, mimicking a cycling motion.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "V-Ups",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = null,
-                Description = "Lie flat on your back with your arms extended above your head. Lift your legs and upper body at the same time, trying to touch your toes at the top of the movement, then lower back down.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Squat",
+                Name = "Pike Push-ups",
                 Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
                 SecondaryMuscleGroup = null,
-                Description = "Hold a kettlebell by the horns close to your chest. Squat down by bending at the knees and pushing your hips back, then return to standing.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Start in a plank position with your hips raised towards the ceiling, lower your head towards the ground by bending your elbows, then push yourself back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=gZHRniTAKpY"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Kettlebell Lunges",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
-                SecondaryMuscleGroup = null,
-                Description = "Hold a kettlebell in each hand at your sides. Step forward into a lunge, lowering your back knee towards the ground, then push back up to standing. Alternate legs.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Deadlift",
-                Priority = 3,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand with your feet hip-width apart with a kettlebell between them. Bend at the hips to grab the kettlebell, keep your back straight, stand up by extending your hips, then lower the kettlebell back down.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Single-Leg Kettlebell Deadlift",
-                Priority = 4,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand on one leg with a kettlebell in front of you. Bend forward at the hip, extending your free leg behind you for balance, and grab the kettlebell. Return to standing.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Kettlebell Swing",
-                Priority = 5,
-                Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
-                SecondaryMuscleGroup = null,
-                Description = "Stand with feet slightly wider than hip-width apart, holding a kettlebell with both hands. Bend your knees slightly, hinge at your hips to swing the kettlebell between your legs, then thrust your hips forward to swing the kettlebell up to chest height.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
-            });
-
-
-            _context.Exercises.Add(new Exercise()
-            {
-                Name = "Dumbbell Squat",
+                Name = "Bodyweight Shoulder Press",
                 Priority = 1,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
-                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
                 SecondaryMuscleGroup = null,
-                Description = "Stand with feet hip-width apart, holding a dumbbell in each hand at your sides. Squat down by bending your knees and pushing your hips back, then drive through your heels to return to standing.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Stand with your feet shoulder-width apart and arms bent, press your hands upwards until your arms are fully extended overhead, then lower them back down to shoulder level",
+                YoutubeUrl = "https://www.youtube.com/watch?v=-rh3MHnRI_I"
             });
 
             _context.Exercises.Add(new Exercise()
             {
-                Name = "Dumbbell Lunges",
-                Priority = 2,
-                Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
+                Name = "Dive Bomber Push-ups",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Start in a downward dog position with your hips raised towards the ceiling and your hands and feet on the ground, lower your chest towards the ground by bending your elbows, then arch your back and push your chest upwards as you straighten your arms",
+                YoutubeUrl = "https://www.youtube.com/watch?v=M6vpFV6Wkl4"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Wall Walks",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
+                SecondaryMuscleGroup = null,
+                Description = "Start in a plank position with your feet against a wall, walk your hands towards the wall as you walk your feet up the wall, keep walking until you are in a handstand position against the wall, then walk back down to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=s_GWBixx_eE"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bodyweight Squats",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
                 SecondaryMuscleGroup = null,
-                Description = "Hold a dumbbell in each hand at your sides. Step forward into a lunge, lowering your hips until both knees are bent at about a 90-degree angle. Push back up to the starting position and alternate legs.",
-                YoutubeUrl = "https://www.youtube.com/watch?v=exampleURL"
+                Description = "Stand with your feet shoulder-width apart, squat down by bending your knees and pushing your hips back, then stand back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=QFvNhsWMU0c"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Lunges",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand with your feet together, step forward with one foot and lower your body until both knees are bent at a 90-degree angle, then push back up to the starting position and repeat on the other side",
+                YoutubeUrl = "https://www.youtube.com/watch?v=B3u9UelYlpU"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Jump Squats",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand with your feet shoulder-width apart, squat down by bending your knees and pushing your hips back, then explode upwards into a jump, land softly and immediately go into the next repetition",
+                YoutubeUrl = "https://www.youtube.com/watch?v=JB2oyawG9KI"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Calf Raises",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Stand with your feet shoulder-width apart, raise your heels off the ground by pushing through the balls of your feet, then lower them back down to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=2PdJFbjWHEU"
+            });
+
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Burpees",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bodyweight"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
+                SecondaryMuscleGroup = null,
+                Description = "Start in a standing position, squat down and place your hands on the ground, jump your feet back into a plank position, do a push-up, jump your feet back towards your hands, then explode upwards into a jump",
+                YoutubeUrl = "https://www.youtube.com/watch?v=JZQA08SlJnM"
             });
 
 
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie face down on a bench with a dumbbell in each hand, let your arms hang straight down towards the floor, pull the dumbbells up towards your chest by squeezing your shoulder blades together, then lower them back down with control",
+                YoutubeUrl = "https://www.youtube.com/watch?v=D1tdA_e3jKw"
+            });
 
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Pull-overs",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie face up on a bench with a dumbbell in both hands, lower the dumbbell back over your head until your arms are parallel to the ground, then pull the dumbbell back up over your chest",
+                YoutubeUrl = "https://www.youtube.com/watch?v=7OoII_aT7OE"
+            });
 
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench T-bar Rows",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Place one end of a barbell in the corner of a bench and straddle the bench, hold the other end of the barbell with one hand, pull the barbell up towards your chest by squeezing your shoulder blade, then lower it back down with control",
+                YoutubeUrl = "https://www.youtube.com/watch?v=o7wZPW6Y2hw"
+            });
 
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Shrugs",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the edge of a bench with a dumbbell in each hand, let your arms hang straight down towards the floor, shrug your shoulders up towards your ears, then lower them back down with control",
+                YoutubeUrl = "https://www.youtube.com/watch?v=OujIzKssvJg"
+            });
 
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Reverse Flyes",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie face down on a bench with a dumbbell in each hand, let your arms hang straight down towards the floor, lift the dumbbells out to the side until your arms are parallel to the ground, then lower them back down with control",
+                YoutubeUrl = "https://www.youtube.com/watch?v=k5GjKyvT1rw"
+            });
 
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Bicep Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the edge of a bench with a dumbbell in each hand, let your arms hang straight down towards the floor, curl the dumbbells towards your shoulders, then lower them back down with control",
+                YoutubeUrl = "https://www.youtube.com/watch?v=iu8B3XaF2Ow"
+            });
 
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Hammer Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the edge of a bench with a dumbbell in each hand, let your arms hang straight down towards the floor, curl the dumbbells towards your shoulders with a neutral grip, then lower them back down with control",
+                YoutubeUrl = "https://www.youtube.com/watch?v=SPbSdfpH3SM"
+            });
 
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Preacher Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the edge of a bench with a dumbbell in each hand, rest your upper arms against the bench with your elbows bent, curl the dumbbells towards your shoulders, then lower them back down with control",
+                YoutubeUrl = "https://www.youtube.com/watch?v=z_GIyd9rNJI"
+            });
 
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Concentration Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on the edge of a bench with a dumbbell in one hand, rest your elbow against your inner thigh, curl the dumbbell towards your shoulder, then lower it back down with control",
+                YoutubeUrl = "https://www.youtube.com/watch?v=Woq_GNcsQz8"
+            });
 
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Incline Curls",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
+                SecondaryMuscleGroup = null,
+                Description = "Sit on an incline bench with a dumbbell in each hand, let your arms hang straight down towards the floor, curl the dumbbells towards your shoulders, then lower them back down with control",
+                YoutubeUrl = "https://www.youtube.com/watch?v=FbI_8OQuE1s"
+            });
 
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Bench Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie flat on a bench with a barbell above your chest, lower the barbell to your chest, then push it back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=gRVjAtPip0Y"
+            });
 
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Incline Bench Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on an incline bench with a barbell above your chest, lower the barbell to your upper chest, then push it back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=8igDA_9b1vA"
+            });
 
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Dumbbell Bench Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie flat on a bench with a dumbbell in each hand, lower the dumbbells to your chest, then push them back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=8D1cRy3Oz4s"
+            });
 
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Decline Bench Press",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie on a decline bench with a barbell above your chest, lower the barbell to your lower chest, then push it back up to the starting position",
+                YoutubeUrl = "https://www.youtube.com/watch?v=v5b-YGG6Gn4"
+            });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            _context.Exercises.Add(new Exercise()
+            {
+                Name = "Chest Flyes",
+                Priority = 1,
+                Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
+                PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Chest"),
+                SecondaryMuscleGroup = null,
+                Description = "Lie flat on a bench with a dumbbell in each hand, arms extended above your chest, lower the dumbbells out to the sides in a wide arc, then bring them back together above your chest",
+                YoutubeUrl = "https://www.youtube.com/watch?v=kaWvxPb7yX4"
+            });
 
 
 
