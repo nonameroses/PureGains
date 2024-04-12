@@ -305,7 +305,7 @@ public class ApplicationDbContextInitialiser
 
             _context.Muscles.Add(new Muscle
             {
-                Name = "Traps",
+                Name = "Shoulders",
                 Description = "Trapezius - a large muscle extending over the back of the neck and shoulders.",
                 MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 1)
             });
@@ -373,7 +373,7 @@ public class ApplicationDbContextInitialiser
 
             _context.Muscles.Add(new Muscle
             {
-                Name = "Obliques",
+                Name = "Abs",
                 Description = "Muscles on the sides of the abdominal area responsible for rotation.",
                 MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 6)
             });
@@ -387,7 +387,7 @@ public class ApplicationDbContextInitialiser
 
             _context.Muscles.Add(new Muscle
             {
-                Name = "Hamstrings",
+                Name = "Legs",
                 Description = "Muscles at the back of the thigh responsible for knee flexion.",
                 MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
             });
@@ -415,14 +415,14 @@ public class ApplicationDbContextInitialiser
 
             _context.Muscles.Add(new Muscle
             {
-                Name = "Forearms",
+                Name = "Biceps",
                 Description = "Muscles of the forearm responsible for wrist and finger movements.",
                 MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 2)
             });
 
             _context.Muscles.Add(new Muscle
             {
-                Name = "Glutes",
+                Name = "Legs",
                 Description = "Muscles of the buttocks responsible for hip movement.",
                 MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 7)
             });
@@ -485,7 +485,7 @@ public class ApplicationDbContextInitialiser
 
             _context.Muscles.Add(new Muscle
             {
-                Name = "Internal Obliques",
+                Name = "Internal Abs",
                 Description = "Muscles on the sides of the abdominal area responsible for rotation.",
                 MuscleGroup = _context.MuscleGroups.Single(mg => mg.Id == 6)
             });
@@ -846,7 +846,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Core"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
                 Description = "Get into a plank position with one hand on the kettlebell, row the kettlebell to your side and alternate arms",
                 YoutubeUrl = "https://www.youtube.com/watch?v=2EJFNuGI2N8"
             });
@@ -1171,7 +1171,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Kettlebell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Core"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
                 Description = "Get into a plank position with one hand on the kettlebell, row the kettlebell to your side and alternate arms",
                 YoutubeUrl = "https://www.youtube.com/watch?v=2EJFNuGI2N8"
             });
@@ -1271,7 +1271,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Core"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
                 Description = "Get into a plank position with one hand on a dumbbell, row the dumbbell to your side and alternate arms",
                 YoutubeUrl = "https://www.youtube.com/watch?v=dwh-yzjaaZ0"
             });
@@ -1537,7 +1537,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Dumbbell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Full-Body"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Core"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
                 Description = "Get into a plank position with one hand on a dumbbell, row the dumbbell to your side and alternate arms",
                 YoutubeUrl = "https://www.youtube.com/watch?v=dwh-yzjaaZ0"
             });
@@ -1681,7 +1681,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Hamstrings"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
                 Description = "Hold a barbell across your upper back, bend forward at the hips while keeping your back straight, and then return to standing",
                 YoutubeUrl = "https://www.youtube.com/watch?v=uHcXPcma09k"
             });
@@ -1814,7 +1814,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Barbell"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Traps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
                 Description = "Hold the barbell with an overhand grip and raise it towards your chin, keeping it close to your body",
                 YoutubeUrl = "https://www.youtube.com/watch?v=SJrMCOkWbKU"
             });
@@ -2059,7 +2059,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Core"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
                 Description = "Get into a plank position with both hands on the plate, row one arm up towards your chest, then alternate",
                 YoutubeUrl = "https://www.youtube.com/watch?v=Og0z3P-USts"
             });
@@ -2280,7 +2280,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Plate"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Forearms"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
                 Description = "Hold the plate with both hands and curl it towards your shoulders with an overhand grip",
                 YoutubeUrl = "https://www.youtube.com/watch?v=TMcWwBxyq_4"
             });
@@ -2434,7 +2434,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Forearms"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
                 Description = "Hang towels over the bar and grab them with an underhand grip, then pull yourself up until your chin is above the bar",
                 YoutubeUrl = "https://www.youtube.com/watch?v=4P4bDoe-FIk"
             });
@@ -2578,7 +2578,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Core"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
                 Description = "Perform a pull-up while simultaneously raising your knees towards your chest, engaging the shoulders and core",
                 YoutubeUrl = "https://www.youtube.com/watch?v=2_AqvoRRxIM"
             });
@@ -2622,7 +2622,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Core"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
                 Description = "Perform a pull-up while maintaining an L-sit position, engaging the shoulders and core",
                 YoutubeUrl = "https://www.youtube.com/watch?v=v2KGmUw59-o"
             });
@@ -2655,7 +2655,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Pull-up Bar"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Obliques"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
                 Description = "Hang from the bar and rotate your legs from side to side while keeping them straight, mimicking the motion of windshield wipers",
                 YoutubeUrl = "https://www.youtube.com/watch?v=2eUBaxO-QAw"
             });
@@ -2897,7 +2897,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Forearms"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
                 Description = "Sit on the edge of a bench with a barbell in front of you, grip the bar with an overhand grip and curl it up towards your shoulders, then lower it back down",
                 YoutubeUrl = "https://www.youtube.com/watch?v=8YXw-3SqFsQ"
             });
@@ -3062,7 +3062,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Traps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
                 Description = "Sit on the edge of a bench with a dumbbell in each hand, shrug your shoulders up towards your ears, then lower them back down",
                 YoutubeUrl = "https://www.youtube.com/watch?v=2I1SI0rInw0"
             });
@@ -3095,7 +3095,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Obliques"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Abs"),
                 Description = "Sit on the edge of a bench with your knees bent and feet flat on the ground, lean back slightly and hold a weight plate or dumbbell with both hands, twist your torso from side to side, engaging your obliques",
                 YoutubeUrl = "https://www.youtube.com/watch?v=9Z5fDLn8E7Y"
             });
@@ -3337,7 +3337,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Band"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Forearms"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Biceps"),
                 Description = "Stand on a resistance band with both feet, hold the ends of the band with your palms facing downwards, curl the band up towards your shoulders while keeping your elbows close to your sides, then lower back down",
                 YoutubeUrl = "https://www.youtube.com/watch?v=CrwAkjsR6Lk"
             });
@@ -3502,7 +3502,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Band"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Traps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
                 Description = "Stand on a resistance band with both feet, hold the ends of the band with your hands in front of your thighs, pull the band up towards your chin by raising your elbows out to the sides, then return to the starting position",
                 YoutubeUrl = "https://www.youtube.com/watch?v=D8yAwMfcT8k"
             });
@@ -3546,7 +3546,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Band"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Glutes"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
                 Description = "Lie on your back with your knees bent and feet flat on the ground, place a resistance band just above your knees, lift your hips up towards the ceiling, squeezing your glutes at the top, then lower back down",
                 YoutubeUrl = "https://www.youtube.com/watch?v=czrLz4XoEYc"
             });
@@ -3557,7 +3557,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Band"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Glutes"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Legs"),
                 Description = "Attach a resistance band around your ankles, stand with your feet together, then lift one leg out to the side as high as you can, keeping your other leg straight, then return to the starting position",
                 YoutubeUrl = "https://www.youtube.com/watch?v=Gxx24w9Ghm0"
             });
@@ -3712,7 +3712,7 @@ public class ApplicationDbContextInitialiser
                 Priority = 1,
                 Equipment = _context.Equipment.Single(e => e.Name == "Bench"),
                 PrimaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Back"),
-                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Traps"),
+                SecondaryMuscleGroup = _context.MuscleGroups.Single(e => e.Name == "Shoulders"),
                 Description = "Sit on the end of a bench with a dumbbell in each hand, let your arms hang down by your sides, then shrug your shoulders up towards your ears, squeezing your traps at the top, then lower them back down",
                 YoutubeUrl = "https://www.youtube.com/watch?v=VkRCBxW9oWM"
             });
