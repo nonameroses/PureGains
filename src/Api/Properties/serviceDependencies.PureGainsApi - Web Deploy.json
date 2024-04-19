@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "ignored": "true",
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:DefaultConnection"
+    },
+    "mssql2": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/PureGainsApi/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsProdConnection_7F1A0B3676",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/puregainsserver/databases/PureGainsDb",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:ProdConnection",
+      "dynamicId": null
+    }
+  }
+}
