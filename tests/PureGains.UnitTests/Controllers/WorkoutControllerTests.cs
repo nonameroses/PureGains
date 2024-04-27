@@ -38,7 +38,7 @@ public class WorkoutControllerTests
             }
         };
 
-        mockMediator.Setup(m => m.Send(It.IsAny<GetWorkouts.Query>(),
+        mockMediator.Setup(m => m.Send(It.IsAny<GetWorkoutsForUser.Query>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(expectedResult);
 

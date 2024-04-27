@@ -16,7 +16,7 @@ public class MuscleGroupsController : Controller
     }
 
     [HttpGet("getMuscleGroups")]
-    public async Task<IEnumerable<MuscleGroup>> GetBooks()
+    public async Task<IEnumerable<MuscleGroup>> GetMuscleGroups()
     {
         var muscleGroups = await _mediator.Send(new GetMuscleGroups.Query());
 
