@@ -52,7 +52,7 @@ public class ExerciseControllerTests
 
         //Act
 
-        var result = await controller.GetExercisesForUser(requestDto);
+        var result = await controller.GetInitialExercisesForUser(requestDto);
 
         Assert.NotNull(result);
         Assert.Equal(expectedResult, result);
